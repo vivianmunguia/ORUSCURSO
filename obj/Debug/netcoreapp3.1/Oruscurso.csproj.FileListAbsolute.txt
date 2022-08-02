@@ -1,0 +1,16 @@
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\bin\Debug\netcoreapp3.1\Oruscurso.exe
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\bin\Debug\netcoreapp3.1\Oruscurso.deps.json
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\bin\Debug\netcoreapp3.1\Oruscurso.runtimeconfig.json
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\bin\Debug\netcoreapp3.1\Oruscurso.runtimeconfig.dev.json
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\bin\Debug\netcoreapp3.1\Oruscurso.dll
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\bin\Debug\netcoreapp3.1\Oruscurso.pdb
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.csproj.AssemblyReference.cache
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.Presentacion.MenuPrincipal.resources
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.csproj.GenerateResource.cache
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.AssemblyInfoInputs.cache
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.AssemblyInfo.cs
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.csproj.CoreCompileInputs.cache
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.dll
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.pdb
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.genruntimeconfig.cache
