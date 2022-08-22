@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Oruscurso.Presentacion
@@ -15,9 +10,23 @@ namespace Oruscurso.Presentacion
             InitializeComponent();
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
+        private void MenuPrincipal_Load(object sender, EventArgs e)
         {
+            panelBienvenida.Dock = DockStyle.Fill;
+        }
 
+        private void btnConsultas_Click(object sender, EventArgs e)
+        {
+            PruebaForm frm = new PruebaForm();
+            frm.ShowDialog();
+        }
+
+        private void btnPersonal_Click(object sender, EventArgs e)
+        {
+            PruebasControl Control = new PruebasControl();
+            panel2.Controls.Clear();
+            Control.Dock = DockStyle.Fill;
+            panel2.Controls.Add(Control);
         }
     }
 }
