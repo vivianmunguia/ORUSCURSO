@@ -17,16 +17,14 @@ namespace Oruscurso.Presentacion
 
         private void btnConsultas_Click(object sender, EventArgs e)
         {
-            PruebaForm frm = new PruebaForm();
-            frm.ShowDialog();
         }
 
         private void btnPersonal_Click(object sender, EventArgs e)
         {
-            PruebasControl Control = new PruebasControl();
-            panel2.Controls.Clear();
-            Control.Dock = DockStyle.Fill;
-            panel2.Controls.Add(Control);
+            PanelPadre.Controls.Clear();
+            Personal control = new Personal();
+            control.Dock = DockStyle.Fill;
+            PanelPadre.Controls.Add(control);
         }
     }
 }
