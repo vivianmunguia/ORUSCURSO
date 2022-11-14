@@ -48,14 +48,15 @@ namespace Oruscurso.Presentacion
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.PanelRegistros = new System.Windows.Forms.Panel();
+            this.dataListadoCargos = new System.Windows.Forms.DataGridView();
             this.PanelCargos = new System.Windows.Forms.Panel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.btnGuardarC = new System.Windows.Forms.Button();
+            this.btnGuardarCambiosC = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtSueldoG = new System.Windows.Forms.TextBox();
+            this.txtCargoG = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -84,6 +85,7 @@ namespace Oruscurso.Presentacion
             this.PanelPaginado.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.PanelRegistros.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListadoCargos)).BeginInit();
             this.PanelCargos.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -100,7 +102,7 @@ namespace Oruscurso.Presentacion
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(975, 60);
+            this.panel1.Size = new System.Drawing.Size(1050, 60);
             this.panel1.TabIndex = 0;
             // 
             // button7
@@ -124,7 +126,7 @@ namespace Oruscurso.Presentacion
             this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Location = new System.Drawing.Point(905, 0);
+            this.btnAgregar.Location = new System.Drawing.Point(980, 0);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(70, 60);
             this.btnAgregar.TabIndex = 3;
@@ -177,7 +179,7 @@ namespace Oruscurso.Presentacion
             this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(975, 425);
+            this.dataGridView1.Size = new System.Drawing.Size(1050, 425);
             this.dataGridView1.TabIndex = 1;
             // 
             // PanelPaginado
@@ -193,7 +195,7 @@ namespace Oruscurso.Presentacion
             this.PanelPaginado.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelPaginado.Location = new System.Drawing.Point(0, 485);
             this.PanelPaginado.Name = "PanelPaginado";
-            this.PanelPaginado.Size = new System.Drawing.Size(975, 65);
+            this.PanelPaginado.Size = new System.Drawing.Size(1050, 65);
             this.PanelPaginado.TabIndex = 2;
             // 
             // button12
@@ -301,6 +303,7 @@ namespace Oruscurso.Presentacion
             // PanelRegistros
             // 
             this.PanelRegistros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.PanelRegistros.Controls.Add(this.dataListadoCargos);
             this.PanelRegistros.Controls.Add(this.PanelCargos);
             this.PanelRegistros.Controls.Add(this.button6);
             this.PanelRegistros.Controls.Add(this.flowLayoutPanel1);
@@ -323,66 +326,80 @@ namespace Oruscurso.Presentacion
             this.PanelRegistros.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PanelRegistros.Location = new System.Drawing.Point(18, 75);
             this.PanelRegistros.Name = "PanelRegistros";
-            this.PanelRegistros.Size = new System.Drawing.Size(954, 370);
+            this.PanelRegistros.Size = new System.Drawing.Size(1029, 370);
             this.PanelRegistros.TabIndex = 0;
             this.PanelRegistros.Visible = false;
+            // 
+            // dataListadoCargos
+            // 
+            this.dataListadoCargos.AllowUserToAddRows = false;
+            this.dataListadoCargos.AllowUserToDeleteRows = false;
+            this.dataListadoCargos.AllowUserToResizeRows = false;
+            this.dataListadoCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListadoCargos.Location = new System.Drawing.Point(364, 245);
+            this.dataListadoCargos.Name = "dataListadoCargos";
+            this.dataListadoCargos.RowTemplate.Height = 25;
+            this.dataListadoCargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataListadoCargos.Size = new System.Drawing.Size(223, 111);
+            this.dataListadoCargos.TabIndex = 12;
             // 
             // PanelCargos
             // 
             this.PanelCargos.Controls.Add(this.flowLayoutPanel3);
             this.PanelCargos.Controls.Add(this.panel10);
             this.PanelCargos.Controls.Add(this.panel11);
-            this.PanelCargos.Controls.Add(this.textBox7);
-            this.PanelCargos.Controls.Add(this.textBox8);
+            this.PanelCargos.Controls.Add(this.txtSueldoG);
+            this.PanelCargos.Controls.Add(this.txtCargoG);
             this.PanelCargos.Controls.Add(this.label10);
             this.PanelCargos.Controls.Add(this.label11);
-            this.PanelCargos.Location = new System.Drawing.Point(530, 195);
+            this.PanelCargos.Location = new System.Drawing.Point(613, 112);
             this.PanelCargos.Name = "PanelCargos";
             this.PanelCargos.Size = new System.Drawing.Size(427, 181);
             this.PanelCargos.TabIndex = 11;
             // 
             // flowLayoutPanel3
             // 
-            this.flowLayoutPanel3.Controls.Add(this.button13);
-            this.flowLayoutPanel3.Controls.Add(this.button15);
+            this.flowLayoutPanel3.Controls.Add(this.btnGuardarC);
+            this.flowLayoutPanel3.Controls.Add(this.btnGuardarCambiosC);
             this.flowLayoutPanel3.Location = new System.Drawing.Point(133, 90);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(262, 74);
             this.flowLayoutPanel3.TabIndex = 13;
             // 
-            // button13
+            // btnGuardarC
             // 
-            this.button13.BackgroundImage = global::Oruscurso.Properties.Resources.rectangulo_redondeado;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(3, 3);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(122, 63);
-            this.button13.TabIndex = 0;
-            this.button13.Text = "Guardar";
-            this.button13.UseVisualStyleBackColor = true;
+            this.btnGuardarC.BackgroundImage = global::Oruscurso.Properties.Resources.rectangulo_redondeado;
+            this.btnGuardarC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuardarC.FlatAppearance.BorderSize = 0;
+            this.btnGuardarC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGuardarC.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarC.Location = new System.Drawing.Point(3, 3);
+            this.btnGuardarC.Name = "btnGuardarC";
+            this.btnGuardarC.Size = new System.Drawing.Size(122, 63);
+            this.btnGuardarC.TabIndex = 0;
+            this.btnGuardarC.Text = "Guardar";
+            this.btnGuardarC.UseVisualStyleBackColor = true;
+            this.btnGuardarC.Click += new System.EventHandler(this.btnGuardarC_Click);
             // 
-            // button15
+            // btnGuardarCambiosC
             // 
-            this.button15.BackgroundImage = global::Oruscurso.Properties.Resources.rectangulo_redondeado;
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(131, 3);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(122, 63);
-            this.button15.TabIndex = 9;
-            this.button15.Text = "Guardar*";
-            this.button15.UseVisualStyleBackColor = true;
+            this.btnGuardarCambiosC.BackgroundImage = global::Oruscurso.Properties.Resources.rectangulo_redondeado;
+            this.btnGuardarCambiosC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuardarCambiosC.FlatAppearance.BorderSize = 0;
+            this.btnGuardarCambiosC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarCambiosC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarCambiosC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarCambiosC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGuardarCambiosC.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarCambiosC.Location = new System.Drawing.Point(131, 3);
+            this.btnGuardarCambiosC.Name = "btnGuardarCambiosC";
+            this.btnGuardarCambiosC.Size = new System.Drawing.Size(122, 63);
+            this.btnGuardarCambiosC.TabIndex = 9;
+            this.btnGuardarCambiosC.Text = "Guardar*";
+            this.btnGuardarCambiosC.UseVisualStyleBackColor = true;
             // 
             // panel10
             // 
@@ -400,27 +417,28 @@ namespace Oruscurso.Presentacion
             this.panel11.Size = new System.Drawing.Size(210, 1);
             this.panel11.TabIndex = 12;
             // 
-            // textBox7
+            // txtSueldoG
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox7.ForeColor = System.Drawing.Color.White;
-            this.textBox7.Location = new System.Drawing.Point(185, 49);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(210, 22);
-            this.textBox7.TabIndex = 9;
+            this.txtSueldoG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.txtSueldoG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSueldoG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSueldoG.ForeColor = System.Drawing.Color.White;
+            this.txtSueldoG.Location = new System.Drawing.Point(185, 42);
+            this.txtSueldoG.Name = "txtSueldoG";
+            this.txtSueldoG.Size = new System.Drawing.Size(210, 22);
+            this.txtSueldoG.TabIndex = 9;
+            this.txtSueldoG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldoG_KeyPress);
             // 
-            // textBox8
+            // txtCargoG
             // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox8.ForeColor = System.Drawing.Color.White;
-            this.textBox8.Location = new System.Drawing.Point(185, 9);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(210, 22);
-            this.textBox8.TabIndex = 10;
+            this.txtCargoG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.txtCargoG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCargoG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCargoG.ForeColor = System.Drawing.Color.White;
+            this.txtCargoG.Location = new System.Drawing.Point(185, 9);
+            this.txtCargoG.Name = "txtCargoG";
+            this.txtCargoG.Size = new System.Drawing.Size(210, 22);
+            this.txtCargoG.TabIndex = 10;
             // 
             // label10
             // 
@@ -465,7 +483,7 @@ namespace Oruscurso.Presentacion
             this.flowLayoutPanel1.Controls.Add(this.btnGuardarCambiosPersonal);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(76, 236);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(512, 93);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(258, 72);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // btnGuardarPersonal
@@ -484,6 +502,7 @@ namespace Oruscurso.Presentacion
             this.btnGuardarPersonal.TabIndex = 0;
             this.btnGuardarPersonal.Text = "Guardar";
             this.btnGuardarPersonal.UseVisualStyleBackColor = true;
+            this.btnGuardarPersonal.Click += new System.EventHandler(this.btnGuardarPersonal_Click);
             // 
             // btnGuardarCambiosPersonal
             // 
@@ -514,6 +533,7 @@ namespace Oruscurso.Presentacion
             this.btnAgregarCargo.TabIndex = 8;
             this.btnAgregarCargo.Text = "+ Agregar cargo";
             this.btnAgregarCargo.UseVisualStyleBackColor = true;
+            this.btnAgregarCargo.Click += new System.EventHandler(this.btnAgregarCargo_Click);
             // 
             // cbxPais
             // 
@@ -584,6 +604,7 @@ namespace Oruscurso.Presentacion
             this.txtSueldoHora.Name = "txtSueldoHora";
             this.txtSueldoHora.Size = new System.Drawing.Size(180, 22);
             this.txtSueldoHora.TabIndex = 5;
+            this.txtSueldoHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldoHora_KeyPress);
             // 
             // txtCargo
             // 
@@ -595,6 +616,7 @@ namespace Oruscurso.Presentacion
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(210, 22);
             this.txtCargo.TabIndex = 5;
+            this.txtCargo.TextChanged += new System.EventHandler(this.txtCargo_TextChanged);
             // 
             // textBox4
             // 
@@ -688,7 +710,7 @@ namespace Oruscurso.Presentacion
             this.Controls.Add(this.PanelPaginado);
             this.Controls.Add(this.panel1);
             this.Name = "Personal";
-            this.Size = new System.Drawing.Size(975, 550);
+            this.Size = new System.Drawing.Size(1050, 550);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -698,6 +720,7 @@ namespace Oruscurso.Presentacion
             this.flowLayoutPanel2.ResumeLayout(false);
             this.PanelRegistros.ResumeLayout(false);
             this.PanelRegistros.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListadoCargos)).EndInit();
             this.PanelCargos.ResumeLayout(false);
             this.PanelCargos.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
@@ -748,13 +771,14 @@ namespace Oruscurso.Presentacion
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel PanelCargos;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button btnGuardarC;
+        private System.Windows.Forms.Button btnGuardarCambiosC;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtSueldoG;
+        private System.Windows.Forms.TextBox txtCargoG;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridView dataListadoCargos;
     }
 }
