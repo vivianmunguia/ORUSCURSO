@@ -2,6 +2,7 @@
 using Oruscurso.Logica;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Oruscurso.Presentacion
@@ -22,6 +23,15 @@ namespace Oruscurso.Presentacion
             btnGuardarPersonal.Visible = true;
             btnGuardarCambiosPersonal.Visible = false;
             Limpiar();
+        }
+
+        private void LocalizarDtvCargos()
+        {
+            dataListadoCargos.Location = new Point(panel8.Location.X, panel8.Location.Y);
+            dataListadoCargos.Size = new Size(469, 141);
+            dataListadoCargos.Visible = true;
+            lblSueldo.Visible = false;
+            PanelBtnGuardarPer.Visible = false;
         }
 
         private void Limpiar()

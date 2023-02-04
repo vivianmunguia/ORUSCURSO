@@ -30,6 +30,7 @@ namespace Oruscurso.Presentacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Personal));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -60,7 +61,7 @@ namespace Oruscurso.Presentacion
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.PanelBtnGuardarPer = new System.Windows.Forms.FlowLayoutPanel();
             this.btnGuardarPersonal = new System.Windows.Forms.Button();
             this.btnGuardarCambiosPersonal = new System.Windows.Forms.Button();
             this.btnAgregarCargo = new System.Windows.Forms.Button();
@@ -74,7 +75,7 @@ namespace Oruscurso.Presentacion
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.txtIdentificacion = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblSueldo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -88,7 +89,7 @@ namespace Oruscurso.Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoCargos)).BeginInit();
             this.PanelCargos.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.PanelBtnGuardarPer.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -306,7 +307,7 @@ namespace Oruscurso.Presentacion
             this.PanelRegistros.Controls.Add(this.dataListadoCargos);
             this.PanelRegistros.Controls.Add(this.PanelCargos);
             this.PanelRegistros.Controls.Add(this.button6);
-            this.PanelRegistros.Controls.Add(this.flowLayoutPanel1);
+            this.PanelRegistros.Controls.Add(this.PanelBtnGuardarPer);
             this.PanelRegistros.Controls.Add(this.btnAgregarCargo);
             this.PanelRegistros.Controls.Add(this.cbxPais);
             this.PanelRegistros.Controls.Add(this.panel9);
@@ -318,7 +319,7 @@ namespace Oruscurso.Presentacion
             this.PanelRegistros.Controls.Add(this.textBox4);
             this.PanelRegistros.Controls.Add(this.txtIdentificacion);
             this.PanelRegistros.Controls.Add(this.txtNombres);
-            this.PanelRegistros.Controls.Add(this.label5);
+            this.PanelRegistros.Controls.Add(this.lblSueldo);
             this.PanelRegistros.Controls.Add(this.label4);
             this.PanelRegistros.Controls.Add(this.label3);
             this.PanelRegistros.Controls.Add(this.label2);
@@ -336,11 +337,19 @@ namespace Oruscurso.Presentacion
             this.dataListadoCargos.AllowUserToDeleteRows = false;
             this.dataListadoCargos.AllowUserToResizeRows = false;
             this.dataListadoCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataListadoCargos.Location = new System.Drawing.Point(364, 245);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataListadoCargos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataListadoCargos.Location = new System.Drawing.Point(499, 252);
             this.dataListadoCargos.Name = "dataListadoCargos";
-            this.dataListadoCargos.RowTemplate.Height = 25;
+            this.dataListadoCargos.RowTemplate.Height = 40;
             this.dataListadoCargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListadoCargos.Size = new System.Drawing.Size(223, 111);
+            this.dataListadoCargos.Size = new System.Drawing.Size(231, 102);
             this.dataListadoCargos.TabIndex = 12;
             // 
             // PanelCargos
@@ -477,14 +486,14 @@ namespace Oruscurso.Presentacion
             this.button6.TabIndex = 10;
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // flowLayoutPanel1
+            // PanelBtnGuardarPer
             // 
-            this.flowLayoutPanel1.Controls.Add(this.btnGuardarPersonal);
-            this.flowLayoutPanel1.Controls.Add(this.btnGuardarCambiosPersonal);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(76, 236);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(258, 72);
-            this.flowLayoutPanel1.TabIndex = 3;
+            this.PanelBtnGuardarPer.Controls.Add(this.btnGuardarPersonal);
+            this.PanelBtnGuardarPer.Controls.Add(this.btnGuardarCambiosPersonal);
+            this.PanelBtnGuardarPer.Location = new System.Drawing.Point(252, 226);
+            this.PanelBtnGuardarPer.Name = "PanelBtnGuardarPer";
+            this.PanelBtnGuardarPer.Size = new System.Drawing.Size(258, 72);
+            this.PanelBtnGuardarPer.TabIndex = 3;
             // 
             // btnGuardarPersonal
             // 
@@ -651,15 +660,15 @@ namespace Oruscurso.Presentacion
             this.txtNombres.Size = new System.Drawing.Size(336, 22);
             this.txtNombres.TabIndex = 5;
             // 
-            // label5
+            // lblSueldo
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(76, 195);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 21);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Sueldo por hora:";
+            this.lblSueldo.AutoSize = true;
+            this.lblSueldo.ForeColor = System.Drawing.Color.White;
+            this.lblSueldo.Location = new System.Drawing.Point(76, 195);
+            this.lblSueldo.Name = "lblSueldo";
+            this.lblSueldo.Size = new System.Drawing.Size(125, 21);
+            this.lblSueldo.TabIndex = 4;
+            this.lblSueldo.Text = "Sueldo por hora:";
             // 
             // label4
             // 
@@ -724,7 +733,7 @@ namespace Oruscurso.Presentacion
             this.PanelCargos.ResumeLayout(false);
             this.PanelCargos.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.PanelBtnGuardarPer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -738,7 +747,7 @@ namespace Oruscurso.Presentacion
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel PanelRegistros;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblSueldo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -755,7 +764,7 @@ namespace Oruscurso.Presentacion
         private System.Windows.Forms.TextBox txtIdentificacion;
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Button btnGuardarPersonal;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel PanelBtnGuardarPer;
         private System.Windows.Forms.Button btnAgregarCargo;
         private System.Windows.Forms.Button btnGuardarCambiosPersonal;
         private System.Windows.Forms.Button button7;
