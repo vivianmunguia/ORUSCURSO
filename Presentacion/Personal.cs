@@ -14,8 +14,11 @@ namespace Oruscurso.Presentacion
             InitializeComponent();
         }
 
+        int Idcargo;
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            LocalizarDtvCargos();
             PanelCargos.Visible = false;
             PanelPaginado.Visible = false;
             PanelRegistros.Visible = true;
@@ -125,6 +128,43 @@ namespace Oruscurso.Presentacion
         private void txtSueldoHora_KeyPress(object sender, KeyPressEventArgs e)
         {
             Bases.Decimales(txtSueldoHora, e);
+        }
+
+        private void dataListadoCargos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataListadoCargos.Columns["EditarC"].Index)
+            {
+                ObtenerCargosEditar();
+            }
+
+            if (e.ColumnIndex == dataListadoCargos.Columns["Cargo"].Index)
+            {
+                ObtenerDatosCargos();
+            }
+        }
+
+        private void ObtenerDatosCargos()
+        {
+            Idcargo = Convert.ToInt32(dataListadoCargos.SelectedCells[1].Value);
+            txtCargo.Text = dataListadoCargos.SelectedCells[2].Value.ToString();
+            txtSueldoHora.Text = dataListadoCargos.SelectedCells[3].Value.ToString();
+            dataListadoCargos.Visible = false;
+            PanelBtnGuardarPer.Visible = true;
+            lblSueldo.Visible = true;
+        }
+
+        private void ObtenerCargosEditar()
+        {
+            Idcargo = Convert.ToInt32(dataListadoCargos.SelectedCells[1].Value);
+            txtCargoG.Text = dataListadoCargos.SelectedCells[2].Value.ToString();
+            txtSueldoG.Text = dataListadoCargos.SelectedCells[3].Value.ToString();
+            btnGuardarC.Visible = false;
+            btnGuardarCambiosC.Visible = true;
+            txtCargoG.Focus();
+            txtCargo.SelectAll();
+            PanelCargos.Visible = true;
+            PanelCargos.Dock = DockStyle.Fill;
+            PanelCargos.BringToFront();
         }
     }
 }
