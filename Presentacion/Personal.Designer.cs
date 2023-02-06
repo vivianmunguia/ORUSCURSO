@@ -423,6 +423,7 @@ namespace Oruscurso.Presentacion
             this.btnGuardarCambiosC.TabIndex = 9;
             this.btnGuardarCambiosC.Text = "Guardar*";
             this.btnGuardarCambiosC.UseVisualStyleBackColor = true;
+            this.btnGuardarCambiosC.Click += new System.EventHandler(this.btnGuardarCambiosC_Click);
             // 
             // btnVolverCargos
             // 

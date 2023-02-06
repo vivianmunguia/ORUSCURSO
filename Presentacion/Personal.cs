@@ -179,5 +179,25 @@ namespace Oruscurso.Presentacion
         {
             PanelRegistros.Visible = false;
         }
+
+        private void btnGuardarCambiosC_Click(object sender, EventArgs e)
+        {
+            EditarCargos();
+        }
+
+        private void EditarCargos()
+        {
+            Lcargos parametros = new Lcargos();
+            Dcargos funcion = new Dcargos();
+            parametros.Id_cargo = Idcargo;
+            parametros.Cargo = txtCargoG.Text;
+            parametros.SueldoPorHora = Convert.ToDouble(txtSueldoG.Text);
+            if (funcion.EditarCargo(parametros) == true)
+            {
+                txtCargo.Clear();
+                BuscarCargos();
+                PanelCargos.Visible = false;
+            }
+        }
     }
 }
