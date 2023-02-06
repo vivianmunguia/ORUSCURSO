@@ -14,7 +14,7 @@ namespace Oruscurso.Presentacion
             InitializeComponent();
         }
 
-        int Idcargo;
+        int Idcargo = 0;
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -48,7 +48,22 @@ namespace Oruscurso.Presentacion
 
         private void btnGuardarPersonal_Click(object sender, EventArgs e)
         {
-
+            if (!string.IsNullOrEmpty(txtNombres.Text))
+            {
+                if (!string.IsNullOrEmpty(txtIdentificacion.Text))
+                {
+                    if (!string.IsNullOrEmpty(cbxPais.Text))
+                    {
+                        if (Idcargo > 0)
+                        {
+                            if (!string.IsNullOrEmpty(txtSueldoHora.Text))
+                            {
+                                Insertar_Personal();
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void Insertar_Personal()
@@ -58,7 +73,12 @@ namespace Oruscurso.Presentacion
             parametros.Nombres = txtNombres.Text;
             parametros.Identificacion = txtIdentificacion.Text;
             parametros.Pais = cbxPais.Text;
-
+            parametros.Id_cargo = Idcargo;
+            parametros.SueldoPorHora = Convert.ToDouble(txtSueldoHora.Text);
+            if (funcion.InsertarPersonal(parametros)==true)
+            {
+                PanelRegistros.Visible = false;
+            }
         }
 
         private void InsertarCargos()
