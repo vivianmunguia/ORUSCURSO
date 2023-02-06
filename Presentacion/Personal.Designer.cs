@@ -55,13 +55,14 @@ namespace Oruscurso.Presentacion
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnGuardarC = new System.Windows.Forms.Button();
             this.btnGuardarCambiosC = new System.Windows.Forms.Button();
+            this.btnVolverCargos = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.txtSueldoG = new System.Windows.Forms.TextBox();
             this.txtCargoG = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnVolverPersonal = new System.Windows.Forms.Button();
             this.PanelBtnGuardarPer = new System.Windows.Forms.FlowLayoutPanel();
             this.btnGuardarPersonal = new System.Windows.Forms.Button();
             this.btnGuardarCambiosPersonal = new System.Windows.Forms.Button();
@@ -104,7 +105,7 @@ namespace Oruscurso.Presentacion
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1050, 60);
+            this.panel1.Size = new System.Drawing.Size(1115, 60);
             this.panel1.TabIndex = 0;
             // 
             // button7
@@ -128,7 +129,7 @@ namespace Oruscurso.Presentacion
             this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Location = new System.Drawing.Point(980, 0);
+            this.btnAgregar.Location = new System.Drawing.Point(1045, 0);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(70, 60);
             this.btnAgregar.TabIndex = 3;
@@ -181,7 +182,7 @@ namespace Oruscurso.Presentacion
             this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1050, 425);
+            this.dataGridView1.Size = new System.Drawing.Size(1115, 425);
             this.dataGridView1.TabIndex = 1;
             // 
             // PanelPaginado
@@ -197,7 +198,7 @@ namespace Oruscurso.Presentacion
             this.PanelPaginado.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelPaginado.Location = new System.Drawing.Point(0, 485);
             this.PanelPaginado.Name = "PanelPaginado";
-            this.PanelPaginado.Size = new System.Drawing.Size(1050, 65);
+            this.PanelPaginado.Size = new System.Drawing.Size(1115, 65);
             this.PanelPaginado.TabIndex = 2;
             // 
             // button12
@@ -307,7 +308,7 @@ namespace Oruscurso.Presentacion
             this.PanelRegistros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.PanelRegistros.Controls.Add(this.dataListadoCargos);
             this.PanelRegistros.Controls.Add(this.PanelCargos);
-            this.PanelRegistros.Controls.Add(this.button6);
+            this.PanelRegistros.Controls.Add(this.btnVolverPersonal);
             this.PanelRegistros.Controls.Add(this.PanelBtnGuardarPer);
             this.PanelRegistros.Controls.Add(this.btnAgregarCargo);
             this.PanelRegistros.Controls.Add(this.cbxPais);
@@ -328,7 +329,7 @@ namespace Oruscurso.Presentacion
             this.PanelRegistros.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PanelRegistros.Location = new System.Drawing.Point(18, 75);
             this.PanelRegistros.Name = "PanelRegistros";
-            this.PanelRegistros.Size = new System.Drawing.Size(1029, 370);
+            this.PanelRegistros.Size = new System.Drawing.Size(1094, 370);
             this.PanelRegistros.TabIndex = 0;
             this.PanelRegistros.Visible = false;
             // 
@@ -338,6 +339,7 @@ namespace Oruscurso.Presentacion
             this.dataListadoCargos.AllowUserToDeleteRows = false;
             this.dataListadoCargos.AllowUserToResizeRows = false;
             this.dataListadoCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListadoCargos.ColumnHeadersVisible = false;
             this.dataListadoCargos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EditarC});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -374,16 +376,17 @@ namespace Oruscurso.Presentacion
             this.PanelCargos.Controls.Add(this.label11);
             this.PanelCargos.Location = new System.Drawing.Point(613, 112);
             this.PanelCargos.Name = "PanelCargos";
-            this.PanelCargos.Size = new System.Drawing.Size(427, 181);
+            this.PanelCargos.Size = new System.Drawing.Size(452, 181);
             this.PanelCargos.TabIndex = 11;
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.btnGuardarC);
             this.flowLayoutPanel3.Controls.Add(this.btnGuardarCambiosC);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(133, 90);
+            this.flowLayoutPanel3.Controls.Add(this.btnVolverCargos);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(121, 90);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(262, 74);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(330, 74);
             this.flowLayoutPanel3.TabIndex = 13;
             // 
             // btnGuardarC
@@ -420,6 +423,24 @@ namespace Oruscurso.Presentacion
             this.btnGuardarCambiosC.TabIndex = 9;
             this.btnGuardarCambiosC.Text = "Guardar*";
             this.btnGuardarCambiosC.UseVisualStyleBackColor = true;
+            // 
+            // btnVolverCargos
+            // 
+            this.btnVolverCargos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.btnVolverCargos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVolverCargos.BackgroundImage")));
+            this.btnVolverCargos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolverCargos.FlatAppearance.BorderSize = 0;
+            this.btnVolverCargos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVolverCargos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVolverCargos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverCargos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnVolverCargos.ForeColor = System.Drawing.Color.White;
+            this.btnVolverCargos.Location = new System.Drawing.Point(259, 3);
+            this.btnVolverCargos.Name = "btnVolverCargos";
+            this.btnVolverCargos.Size = new System.Drawing.Size(62, 52);
+            this.btnVolverCargos.TabIndex = 11;
+            this.btnVolverCargos.UseVisualStyleBackColor = false;
+            this.btnVolverCargos.Click += new System.EventHandler(this.btnVolverCargos_Click);
             // 
             // panel10
             // 
@@ -480,22 +501,23 @@ namespace Oruscurso.Presentacion
             this.label11.TabIndex = 7;
             this.label11.Text = "Cargo:";
             // 
-            // button6
+            // btnVolverPersonal
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(571, 18);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(89, 52);
-            this.button6.TabIndex = 10;
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnVolverPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.btnVolverPersonal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVolverPersonal.BackgroundImage")));
+            this.btnVolverPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolverPersonal.FlatAppearance.BorderSize = 0;
+            this.btnVolverPersonal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVolverPersonal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVolverPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverPersonal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnVolverPersonal.ForeColor = System.Drawing.Color.White;
+            this.btnVolverPersonal.Location = new System.Drawing.Point(571, 18);
+            this.btnVolverPersonal.Name = "btnVolverPersonal";
+            this.btnVolverPersonal.Size = new System.Drawing.Size(62, 52);
+            this.btnVolverPersonal.TabIndex = 10;
+            this.btnVolverPersonal.UseVisualStyleBackColor = false;
+            this.btnVolverPersonal.Click += new System.EventHandler(this.btnVolverPersonal_Click);
             // 
             // PanelBtnGuardarPer
             // 
@@ -730,7 +752,7 @@ namespace Oruscurso.Presentacion
             this.Controls.Add(this.PanelPaginado);
             this.Controls.Add(this.panel1);
             this.Name = "Personal";
-            this.Size = new System.Drawing.Size(1050, 550);
+            this.Size = new System.Drawing.Size(1115, 550);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -779,7 +801,7 @@ namespace Oruscurso.Presentacion
         private System.Windows.Forms.Button btnAgregarCargo;
         private System.Windows.Forms.Button btnGuardarCambiosPersonal;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnVolverPersonal;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label9;
@@ -801,5 +823,6 @@ namespace Oruscurso.Presentacion
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dataListadoCargos;
         private System.Windows.Forms.DataGridViewImageColumn EditarC;
+        private System.Windows.Forms.Button btnVolverCargos;
     }
 }

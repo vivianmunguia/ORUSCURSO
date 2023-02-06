@@ -97,6 +97,9 @@ namespace Oruscurso.Presentacion
             funcion.BuscarCargos(ref dt, txtCargo.Text);
             dataListadoCargos.DataSource = dt;
             Bases.DiseñoDtv(ref dataListadoCargos);
+            dataListadoCargos.Columns[1].Visible= false;
+            dataListadoCargos.Columns[3].Visible = false;
+            dataListadoCargos.Visible = true;
         }
 
         private void txtCargo_TextChanged(object sender, EventArgs e)
@@ -165,6 +168,16 @@ namespace Oruscurso.Presentacion
             PanelCargos.Visible = true;
             PanelCargos.Dock = DockStyle.Fill;
             PanelCargos.BringToFront();
+        }
+
+        private void btnVolverCargos_Click(object sender, EventArgs e)
+        {
+            PanelCargos.Visible = false;
+        }
+
+        private void btnVolverPersonal_Click(object sender, EventArgs e)
+        {
+            PanelRegistros.Visible = false;
         }
     }
 }
