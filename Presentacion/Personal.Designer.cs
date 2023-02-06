@@ -754,6 +754,7 @@ namespace Oruscurso.Presentacion
             this.Controls.Add(this.panel1);
             this.Name = "Personal";
             this.Size = new System.Drawing.Size(1115, 550);
+            this.Load += new System.EventHandler(this.Personal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

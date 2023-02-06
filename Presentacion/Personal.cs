@@ -30,7 +30,7 @@ namespace Oruscurso.Presentacion
 
         private void LocalizarDtvCargos()
         {
-            dataListadoCargos.Location = new Point(panel8.Location.X, panel8.Location.Y);
+            dataListadoCargos.Location = new Point(txtSueldoHora.Location.X, txtSueldoHora.Location.Y);
             dataListadoCargos.Size = new Size(469, 141);
             dataListadoCargos.Visible = true;
             lblSueldo.Visible = false;
@@ -198,6 +198,11 @@ namespace Oruscurso.Presentacion
                 BuscarCargos();
                 PanelCargos.Visible = false;
             }
+        }
+
+        private void Personal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
