@@ -299,7 +299,24 @@ namespace Oruscurso.Presentacion
 
         private void RestaurarPersonal()
         {
+            DialogResult result = MessageBox.Show("Este personal se eliminó, ¿desea volver a habilitarlo?"
+                    , "Restauración de registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
+            if (result == DialogResult.OK)
+            {
+                HabilitarPersonal();
+            }
+        }
+
+        private void HabilitarPersonal()
+        {
+            Lpersonal parametros = new Lpersonal();
+            Dpersonal funcion = new Dpersonal();
+            parametros.Id_personal = Idpersonal;
+            if (funcion.RestaurarPersonal(parametros) == true) 
+            {
+                MostrarPersonal();
+            }
         }
 
         private void EliminarPersonal()
