@@ -37,7 +37,9 @@ namespace Oruscurso.Presentacion
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataListadoPersonal = new System.Windows.Forms.DataGridView();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.PanelPaginado = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -84,7 +86,7 @@ namespace Oruscurso.Presentacion
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListadoPersonal)).BeginInit();
             this.PanelPaginado.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.PanelRegistros.SuspendLayout();
@@ -165,25 +167,47 @@ namespace Oruscurso.Presentacion
             this.textBox1.Size = new System.Drawing.Size(279, 22);
             this.textBox1.TabIndex = 0;
             // 
-            // dataGridView1
+            // dataListadoPersonal
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 60);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1115, 425);
-            this.dataGridView1.TabIndex = 1;
+            this.dataListadoPersonal.AllowUserToAddRows = false;
+            this.dataListadoPersonal.AllowUserToDeleteRows = false;
+            this.dataListadoPersonal.AllowUserToResizeRows = false;
+            this.dataListadoPersonal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.dataListadoPersonal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataListadoPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListadoPersonal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Eliminar,
+            this.Editar});
+            this.dataListadoPersonal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataListadoPersonal.Location = new System.Drawing.Point(0, 60);
+            this.dataListadoPersonal.Name = "dataListadoPersonal";
+            this.dataListadoPersonal.ReadOnly = true;
+            this.dataListadoPersonal.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.dataListadoPersonal.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dataListadoPersonal.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.dataListadoPersonal.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dataListadoPersonal.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dataListadoPersonal.RowTemplate.Height = 40;
+            this.dataListadoPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataListadoPersonal.Size = new System.Drawing.Size(1115, 425);
+            this.dataListadoPersonal.TabIndex = 1;
+            this.dataListadoPersonal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListadoPersonal_CellClick);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "";
+            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
+            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "";
+            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
+            this.Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
             // 
             // PanelPaginado
             // 
@@ -352,6 +376,7 @@ namespace Oruscurso.Presentacion
             this.dataListadoCargos.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataListadoCargos.Location = new System.Drawing.Point(499, 252);
             this.dataListadoCargos.Name = "dataListadoCargos";
+            this.dataListadoCargos.ReadOnly = true;
             this.dataListadoCargos.RowTemplate.Height = 40;
             this.dataListadoCargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListadoCargos.Size = new System.Drawing.Size(231, 102);
@@ -364,6 +389,7 @@ namespace Oruscurso.Presentacion
             this.EditarC.Image = global::Oruscurso.Properties.Resources.lapiz;
             this.EditarC.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.EditarC.Name = "EditarC";
+            this.EditarC.ReadOnly = true;
             // 
             // PanelCargos
             // 
@@ -749,7 +775,7 @@ namespace Oruscurso.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.PanelRegistros);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataListadoPersonal);
             this.Controls.Add(this.PanelPaginado);
             this.Controls.Add(this.panel1);
             this.Name = "Personal";
@@ -758,7 +784,7 @@ namespace Oruscurso.Presentacion
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListadoPersonal)).EndInit();
             this.PanelPaginado.ResumeLayout(false);
             this.PanelPaginado.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -776,7 +802,7 @@ namespace Oruscurso.Presentacion
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataListadoPersonal;
         private System.Windows.Forms.Panel PanelPaginado;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
@@ -826,5 +852,7 @@ namespace Oruscurso.Presentacion
         private System.Windows.Forms.DataGridView dataListadoCargos;
         private System.Windows.Forms.DataGridViewImageColumn EditarC;
         private System.Windows.Forms.Button btnVolverCargos;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private System.Windows.Forms.DataGridViewImageColumn Editar;
     }
 }
