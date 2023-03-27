@@ -210,6 +210,7 @@ namespace Oruscurso.Presentacion
         private void DiseñarDtvPersonal()
         {
             Bases.DiseñoDtv(ref dataListadoPersonal);
+            Bases.DiseñoDtvEliminar(ref dataListadoPersonal);
             PanelPaginado.Visible = true;
             dataListadoPersonal.Columns[2].Visible = false;
             dataListadoPersonal.Columns[7].Visible = false; 
@@ -278,6 +279,7 @@ namespace Oruscurso.Presentacion
             }
             else
             {
+                LocalizarDtvCargos();
                 txtNombres.Text = dataListadoPersonal.SelectedCells[3].Value.ToString();
                 txtIdentificacion.Text = dataListadoPersonal.SelectedCells[4].Value.ToString();
                 cbxPais.Text = dataListadoPersonal.SelectedCells[10].Value.ToString();
@@ -328,6 +330,35 @@ namespace Oruscurso.Presentacion
             if (funcion.EliminarPersonal(parametros) == true)
             {
                 MostrarPersonal();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DiseñarDtvPersonal();
+            timer1.Stop();
+        }
+
+        private void btnGuardarCambiosPersonal_Click(object sender, EventArgs e)
+        {
+            EditarPersonal();
+        }
+
+        private void EditarPersonal()
+        {
+            Lpersonal parametros = new Lpersonal();
+            Dpersonal funcion = new Dpersonal();
+            parametros.Id_personal = Idpersonal;
+            parametros.Nombres = txtNombres.Text;
+            parametros.Identificacion = txtIdentificacion.Text;
+            parametros.Pais = cbxPais.Text;
+            parametros.Id_cargo = Idcargo;
+            parametros.SueldoPorHora = Convert.ToDouble(txtSueldoHora.Text);
+
+            if (funcion.EditarPersonal(parametros) == true)
+            {
+                MostrarPersonal();
+                PanelRegistros.Visible = false;
             }
         }
     }

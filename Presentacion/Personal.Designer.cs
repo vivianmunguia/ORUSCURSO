@@ -29,6 +29,7 @@ namespace Oruscurso.Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Personal));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -84,6 +85,7 @@ namespace Oruscurso.Presentacion
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoPersonal)).BeginInit();
@@ -589,6 +591,7 @@ namespace Oruscurso.Presentacion
             this.btnGuardarCambiosPersonal.TabIndex = 9;
             this.btnGuardarCambiosPersonal.Text = "Guardar*";
             this.btnGuardarCambiosPersonal.UseVisualStyleBackColor = true;
+            this.btnGuardarCambiosPersonal.Click += new System.EventHandler(this.btnGuardarCambiosPersonal_Click);
             // 
             // btnAgregarCargo
             // 
@@ -770,6 +773,11 @@ namespace Oruscurso.Presentacion
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombres y apellidos:";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Personal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -854,5 +862,6 @@ namespace Oruscurso.Presentacion
         private System.Windows.Forms.Button btnVolverCargos;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
+        private System.Windows.Forms.Timer timer1;
     }
 }
