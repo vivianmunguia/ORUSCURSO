@@ -82,8 +82,9 @@ namespace Oruscurso.Presentacion
             parametros.Pais = cbxPais.Text;
             parametros.Id_cargo = Idcargo;
             parametros.SueldoPorHora = Convert.ToDouble(txtSueldoHora.Text);
-            if (funcion.InsertarPersonal(parametros)==true)
+            if (funcion.InsertarPersonal(parametros) == true)
             {
+                ReiniciarPaginado();
                 MostrarPersonal();
                 PanelRegistros.Visible = false;
             }
@@ -125,7 +126,7 @@ namespace Oruscurso.Presentacion
             funcion.BuscarCargos(ref dt, txtCargo.Text);
             dataListadoCargos.DataSource = dt;
             Bases.DiseñoDtv(ref dataListadoCargos);
-            dataListadoCargos.Columns[1].Visible= false;
+            dataListadoCargos.Columns[1].Visible = false;
             dataListadoCargos.Columns[3].Visible = false;
             dataListadoCargos.Visible = true;
         }
@@ -213,7 +214,7 @@ namespace Oruscurso.Presentacion
             Bases.DiseñoDtvEliminar(ref dataListadoPersonal);
             PanelPaginado.Visible = true;
             dataListadoPersonal.Columns[2].Visible = false;
-            dataListadoPersonal.Columns[7].Visible = false; 
+            dataListadoPersonal.Columns[7].Visible = false;
         }
 
         private void btnVolverCargos_Click(object sender, EventArgs e)
@@ -248,7 +249,30 @@ namespace Oruscurso.Presentacion
 
         private void Personal_Load(object sender, EventArgs e)
         {
+            ReiniciarPaginado();
             MostrarPersonal();
+        }
+
+        private void ReiniciarPaginado()
+        {
+            desde = 1;
+            hasta = 10;
+            Contar();
+            if (contador > hasta)
+            {
+                btn_Sig.Visible = true;
+                btn_Atras.Visible = false;
+                btn_Ultima.Visible = true;
+                btn_Primera.Visible = true;
+            }
+            else
+            {
+                btn_Sig.Visible = false;
+                btn_Atras.Visible = false;
+                btn_Ultima.Visible = false;
+                btn_Primera.Visible = false;
+            }
+            Paginar();
         }
 
         private void dataListadoPersonal_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -261,7 +285,7 @@ namespace Oruscurso.Presentacion
                 {
                     EliminarPersonal();
                 }
-                
+
             }
             if (e.ColumnIndex == dataListadoPersonal.Columns["Editar"].Index)
             {
@@ -315,7 +339,7 @@ namespace Oruscurso.Presentacion
             Lpersonal parametros = new Lpersonal();
             Dpersonal funcion = new Dpersonal();
             parametros.Id_personal = Idpersonal;
-            if (funcion.RestaurarPersonal(parametros) == true) 
+            if (funcion.RestaurarPersonal(parametros) == true)
             {
                 MostrarPersonal();
             }
@@ -360,6 +384,97 @@ namespace Oruscurso.Presentacion
                 MostrarPersonal();
                 PanelRegistros.Visible = false;
             }
+        }
+
+        private void btn_Sig_Click(object sender, EventArgs e)
+        {
+            desde += 10;
+            hasta += 10;
+            MostrarPersonal();
+            Contar();
+            if (contador > hasta)
+            {
+                btn_Sig.Visible = true;
+                btn_Atras.Visible = true;
+            }
+            else
+            {
+                btn_Sig.Visible = false;
+                btn_Atras.Visible = true;
+            }
+            Paginar();
+        }
+
+        private void Paginar()
+        {
+            try
+            {
+                lbl_Pagina.Text = (hasta / items_por_pagina).ToString();
+                lbl_TotalPaginas.Text = Math.Ceiling(Convert.ToSingle(contador) / items_por_pagina).ToString(); //Ceiling trae solo la parte entera de la operacion//Convert.ToSingle convierte un entero a decimal
+                totalPaginas = Convert.ToInt32(lbl_TotalPaginas.Text);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        private void Contar()
+        {
+            Dpersonal funcion = new Dpersonal();
+            funcion.ContarPersonal(ref contador);
+        }
+
+        private void btn_Atras_Click(object sender, EventArgs e)
+        {
+            desde -= 10;
+            hasta -= 10;
+            MostrarPersonal();
+            Contar();
+
+            if (contador > hasta)
+            {
+                btn_Sig.Visible = true;
+                btn_Atras.Visible = true;
+            }
+            else
+            {
+                btn_Sig.Visible = false;
+                btn_Atras.Visible = true;
+            }
+            if (desde == 1)
+            {
+                ReiniciarPaginado();
+            }
+            Paginar();
+        }
+
+        private void btn_Ultima_Click(object sender, EventArgs e)
+        {
+            hasta = totalPaginas * items_por_pagina;
+            desde = hasta - 9;
+            MostrarPersonal();
+            Contar();
+
+            if (contador > hasta)
+            {
+                btn_Sig.Visible = true;
+                btn_Atras.Visible = true;
+            }
+            else
+            {
+                btn_Sig.Visible = false;
+                btn_Atras.Visible = true;
+            }
+            Paginar();
+        }
+
+        private void btn_Primera_Click(object sender, EventArgs e)
+        {
+            ReiniciarPaginado();
+            MostrarPersonal();
         }
     }
 }

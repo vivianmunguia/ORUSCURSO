@@ -142,5 +142,22 @@ namespace Oruscurso.Datos
                 CONEXIONMAESTRA.cerrar();
             }
         }
+        public void ContarPersonal(ref int Contador)
+        {
+            try
+            {
+                CONEXIONMAESTRA.abrir();
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(Id_personal) FROM Personal", CONEXIONMAESTRA.conectar);
+                Contador = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            catch (Exception)
+            {
+                Contador = 0;
+            }
+            finally
+            {
+                CONEXIONMAESTRA.cerrar();
+            }
+        }
     }
 }
