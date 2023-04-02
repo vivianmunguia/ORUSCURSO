@@ -33,11 +33,15 @@ namespace Oruscurso.Presentacion
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Personal));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             panel1 = new System.Windows.Forms.Panel();
-            button7 = new System.Windows.Forms.Button();
+            panel2 = new System.Windows.Forms.Panel();
             btnAgregar = new System.Windows.Forms.Button();
+            panel12 = new System.Windows.Forms.Panel();
+            panel7 = new System.Windows.Forms.Panel();
+            panel4 = new System.Windows.Forms.Panel();
+            btnMostrarTodos = new System.Windows.Forms.Button();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             panel3 = new System.Windows.Forms.Panel();
-            textBox1 = new System.Windows.Forms.TextBox();
+            txtBuscador = new System.Windows.Forms.TextBox();
             dataListadoPersonal = new System.Windows.Forms.DataGridView();
             Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             Editar = new System.Windows.Forms.DataGridViewImageColumn();
@@ -87,6 +91,7 @@ namespace Oruscurso.Presentacion
             label1 = new System.Windows.Forms.Label();
             timer1 = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataListadoPersonal).BeginInit();
             PanelPaginado.SuspendLayout();
@@ -101,29 +106,28 @@ namespace Oruscurso.Presentacion
             // panel1
             // 
             panel1.BackColor = System.Drawing.Color.FromArgb(29, 29, 29);
-            panel1.Controls.Add(button7);
-            panel1.Controls.Add(btnAgregar);
+            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(btnMostrarTodos);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(panel3);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtBuscador);
             panel1.Dock = System.Windows.Forms.DockStyle.Top;
             panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(1115, 60);
             panel1.TabIndex = 0;
             // 
-            // button7
+            // panel2
             // 
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            button7.ForeColor = System.Drawing.Color.White;
-            button7.Location = new System.Drawing.Point(419, 11);
-            button7.Name = "button7";
-            button7.Size = new System.Drawing.Size(146, 37);
-            button7.TabIndex = 9;
-            button7.Text = "Mostrar todos";
-            button7.UseVisualStyleBackColor = true;
+            panel2.Controls.Add(btnAgregar);
+            panel2.Controls.Add(panel12);
+            panel2.Controls.Add(panel7);
+            panel2.Controls.Add(panel4);
+            panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            panel2.Location = new System.Drawing.Point(921, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(194, 60);
+            panel2.TabIndex = 10;
             // 
             // btnAgregar
             // 
@@ -133,12 +137,50 @@ namespace Oruscurso.Presentacion
             btnAgregar.Dock = System.Windows.Forms.DockStyle.Right;
             btnAgregar.FlatAppearance.BorderSize = 0;
             btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnAgregar.Location = new System.Drawing.Point(1045, 0);
+            btnAgregar.Location = new System.Drawing.Point(143, 10);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new System.Drawing.Size(70, 60);
+            btnAgregar.Size = new System.Drawing.Size(41, 40);
             btnAgregar.TabIndex = 3;
             btnAgregar.UseVisualStyleBackColor = false;
             btnAgregar.Click += btnAgregar_Click;
+            // 
+            // panel12
+            // 
+            panel12.Dock = System.Windows.Forms.DockStyle.Right;
+            panel12.Location = new System.Drawing.Point(184, 10);
+            panel12.Name = "panel12";
+            panel12.Size = new System.Drawing.Size(10, 40);
+            panel12.TabIndex = 13;
+            // 
+            // panel7
+            // 
+            panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            panel7.Location = new System.Drawing.Point(0, 0);
+            panel7.Name = "panel7";
+            panel7.Size = new System.Drawing.Size(194, 10);
+            panel7.TabIndex = 12;
+            // 
+            // panel4
+            // 
+            panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            panel4.Location = new System.Drawing.Point(0, 50);
+            panel4.Name = "panel4";
+            panel4.Size = new System.Drawing.Size(194, 10);
+            panel4.TabIndex = 11;
+            // 
+            // btnMostrarTodos
+            // 
+            btnMostrarTodos.FlatAppearance.BorderSize = 0;
+            btnMostrarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnMostrarTodos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnMostrarTodos.ForeColor = System.Drawing.Color.White;
+            btnMostrarTodos.Location = new System.Drawing.Point(419, 11);
+            btnMostrarTodos.Name = "btnMostrarTodos";
+            btnMostrarTodos.Size = new System.Drawing.Size(146, 37);
+            btnMostrarTodos.TabIndex = 9;
+            btnMostrarTodos.Text = "Mostrar todos";
+            btnMostrarTodos.UseVisualStyleBackColor = true;
+            btnMostrarTodos.Click += btnMostrarTodos_Click;
             // 
             // pictureBox1
             // 
@@ -158,16 +200,17 @@ namespace Oruscurso.Presentacion
             panel3.Size = new System.Drawing.Size(279, 2);
             panel3.TabIndex = 1;
             // 
-            // textBox1
+            // txtBuscador
             // 
-            textBox1.BackColor = System.Drawing.Color.FromArgb(29, 29, 29);
-            textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            textBox1.ForeColor = System.Drawing.Color.White;
-            textBox1.Location = new System.Drawing.Point(18, 17);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(279, 22);
-            textBox1.TabIndex = 0;
+            txtBuscador.BackColor = System.Drawing.Color.FromArgb(29, 29, 29);
+            txtBuscador.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtBuscador.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtBuscador.ForeColor = System.Drawing.Color.White;
+            txtBuscador.Location = new System.Drawing.Point(18, 17);
+            txtBuscador.Name = "txtBuscador";
+            txtBuscador.Size = new System.Drawing.Size(279, 22);
+            txtBuscador.TabIndex = 0;
+            txtBuscador.TextChanged += txtBuscador_TextChanged;
             // 
             // dataListadoPersonal
             // 
@@ -775,6 +818,7 @@ namespace Oruscurso.Presentacion
             Load += Personal_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataListadoPersonal).EndInit();
             PanelPaginado.ResumeLayout(false);
@@ -797,7 +841,7 @@ namespace Oruscurso.Presentacion
         private System.Windows.Forms.Panel PanelPaginado;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBuscador;
         private System.Windows.Forms.Panel PanelRegistros;
         private System.Windows.Forms.Label lblSueldo;
         private System.Windows.Forms.Label label4;
@@ -819,7 +863,7 @@ namespace Oruscurso.Presentacion
         private System.Windows.Forms.FlowLayoutPanel PanelBtnGuardarPer;
         private System.Windows.Forms.Button btnAgregarCargo;
         private System.Windows.Forms.Button btnGuardarCambiosPersonal;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnMostrarTodos;
         private System.Windows.Forms.Button btnVolverPersonal;
         private System.Windows.Forms.Button btn_Primera;
         private System.Windows.Forms.Button btn_Ultima;
@@ -846,5 +890,9 @@ namespace Oruscurso.Presentacion
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btn_Sig;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel4;
     }
 }

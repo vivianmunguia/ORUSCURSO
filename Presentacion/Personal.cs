@@ -225,6 +225,7 @@ namespace Oruscurso.Presentacion
         private void btnVolverPersonal_Click(object sender, EventArgs e)
         {
             PanelRegistros.Visible = false;
+            PanelPaginado.Visible = true;
         }
 
         private void btnGuardarCambiosC_Click(object sender, EventArgs e)
@@ -472,6 +473,26 @@ namespace Oruscurso.Presentacion
         }
 
         private void btn_Primera_Click(object sender, EventArgs e)
+        {
+            ReiniciarPaginado();
+            MostrarPersonal();
+        }
+
+        private void txtBuscador_TextChanged(object sender, EventArgs e)
+        {
+            BuscarPersonal();
+        }
+
+        private void BuscarPersonal()
+        {
+            DataTable dt = new DataTable();
+            Dpersonal funcion = new Dpersonal();
+            funcion.BuscarPersonal(ref dt, desde, hasta, txtBuscador.Text);
+            dataListadoPersonal.DataSource = dt;
+            DiseñarDtvPersonal();
+        }
+
+        private void btnMostrarTodos_Click(object sender, EventArgs e)
         {
             ReiniciarPaginado();
             MostrarPersonal();
