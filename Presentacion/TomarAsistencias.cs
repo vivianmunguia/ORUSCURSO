@@ -1,6 +1,7 @@
 ﻿using Oruscurso.Datos;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Oruscurso.Presentacion
@@ -10,6 +11,7 @@ namespace Oruscurso.Presentacion
         string Identificacion;
         int IdPersonal;
         int Contador;
+        DateTime fechaReg;
 
         public TomarAsistencias()
         {
@@ -27,7 +29,32 @@ namespace Oruscurso.Presentacion
             BuscarPersonalIdent();
             if (Identificacion == txtIdentificacion.Text)
             {
+                BuscarAsistenciasId();
+                if (Contador == 0)
+                {
+                    DialogResult resultado = MessageBox.Show("¿Agregar una observación?", "Observaciones", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (resultado == DialogResult.OK)
+                    {
+                        panelObservacion.Visible = true;
+                        panelObservacion.Location = new Point(Panel1.Location.X, Panel1.Location.Y);
+                        panelObservacion.Size = new Size(Panel1.Width, Panel1.Height);
+                        panelObservacion.BringToFront();
+                        txtObservacion.Clear();
 
+                    }
+                }
+            }
+        }
+
+        private void BuscarAsistenciasId()
+        {
+            DataTable dt = new DataTable();
+            Dpersonal funcion = new Dpersonal();
+            funcion.BuscarAsistenciasId(ref dt, IdPersonal);
+            Contador = dt.Rows.Count;
+            if (Contador > 0)
+            {
+                fechaReg = Convert.ToDateTime(dt.Rows[0]["Fecha_entrada"]);
             }
         }
 

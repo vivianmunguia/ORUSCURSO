@@ -30,13 +30,13 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TomarAsistencias));
-            panel1 = new System.Windows.Forms.Panel();
+            panel11 = new System.Windows.Forms.Panel();
             btnIniciarSesion = new System.Windows.Forms.Button();
             panel4 = new System.Windows.Forms.Panel();
             panel3 = new System.Windows.Forms.Panel();
             panel2 = new System.Windows.Forms.Panel();
             label1 = new System.Windows.Forms.Label();
-            panel5 = new System.Windows.Forms.Panel();
+            Panel1 = new System.Windows.Forms.Panel();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             txtNombre = new System.Windows.Forms.Label();
             txtaviso = new System.Windows.Forms.Label();
@@ -48,29 +48,29 @@
             label3 = new System.Windows.Forms.Label();
             txtIdentificacion = new System.Windows.Forms.TextBox();
             label2 = new System.Windows.Forms.Label();
-            panel7 = new System.Windows.Forms.Panel();
+            panelObservacion = new System.Windows.Forms.Panel();
             button1 = new System.Windows.Forms.Button();
-            richTextBox1 = new System.Windows.Forms.RichTextBox();
+            txtObservacion = new System.Windows.Forms.RichTextBox();
             label8 = new System.Windows.Forms.Label();
             timerHora = new System.Windows.Forms.Timer(components);
-            panel1.SuspendLayout();
-            panel5.SuspendLayout();
+            panel11.SuspendLayout();
+            Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel7.SuspendLayout();
+            panelObservacion.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // panel11
             // 
-            panel1.Controls.Add(btnIniciarSesion);
-            panel1.Controls.Add(panel4);
-            panel1.Controls.Add(panel3);
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(label1);
-            panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            panel1.Location = new System.Drawing.Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(800, 47);
-            panel1.TabIndex = 0;
+            panel11.Controls.Add(btnIniciarSesion);
+            panel11.Controls.Add(panel4);
+            panel11.Controls.Add(panel3);
+            panel11.Controls.Add(panel2);
+            panel11.Controls.Add(label1);
+            panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            panel11.Location = new System.Drawing.Point(0, 0);
+            panel11.Name = "panel11";
+            panel11.Size = new System.Drawing.Size(800, 47);
+            panel11.TabIndex = 0;
             // 
             // btnIniciarSesion
             // 
@@ -126,23 +126,23 @@
             label1.Text = "Orus 369";
             label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel5
+            // Panel1
             // 
-            panel5.Controls.Add(pictureBox1);
-            panel5.Controls.Add(txtNombre);
-            panel5.Controls.Add(txtaviso);
-            panel5.Controls.Add(lblHora);
-            panel5.Controls.Add(label7);
-            panel5.Controls.Add(lblFecha);
-            panel5.Controls.Add(label4);
-            panel5.Controls.Add(panel6);
-            panel5.Controls.Add(label3);
-            panel5.Controls.Add(txtIdentificacion);
-            panel5.Controls.Add(label2);
-            panel5.Location = new System.Drawing.Point(259, 68);
-            panel5.Name = "panel5";
-            panel5.Size = new System.Drawing.Size(371, 334);
-            panel5.TabIndex = 1;
+            Panel1.Controls.Add(pictureBox1);
+            Panel1.Controls.Add(txtNombre);
+            Panel1.Controls.Add(txtaviso);
+            Panel1.Controls.Add(lblHora);
+            Panel1.Controls.Add(label7);
+            Panel1.Controls.Add(lblFecha);
+            Panel1.Controls.Add(label4);
+            Panel1.Controls.Add(panel6);
+            Panel1.Controls.Add(label3);
+            Panel1.Controls.Add(txtIdentificacion);
+            Panel1.Controls.Add(label2);
+            Panel1.Location = new System.Drawing.Point(259, 68);
+            Panel1.Name = "Panel1";
+            Panel1.Size = new System.Drawing.Size(371, 334);
+            Panel1.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -264,15 +264,16 @@
             label2.Text = "REGISTRO DE ASISTENCIA";
             label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel7
+            // panelObservacion
             // 
-            panel7.Controls.Add(button1);
-            panel7.Controls.Add(richTextBox1);
-            panel7.Controls.Add(label8);
-            panel7.Location = new System.Drawing.Point(21, 68);
-            panel7.Name = "panel7";
-            panel7.Size = new System.Drawing.Size(217, 334);
-            panel7.TabIndex = 2;
+            panelObservacion.Controls.Add(button1);
+            panelObservacion.Controls.Add(txtObservacion);
+            panelObservacion.Controls.Add(label8);
+            panelObservacion.Location = new System.Drawing.Point(21, 68);
+            panelObservacion.Name = "panelObservacion";
+            panelObservacion.Size = new System.Drawing.Size(217, 334);
+            panelObservacion.TabIndex = 2;
+            panelObservacion.Visible = false;
             // 
             // button1
             // 
@@ -289,15 +290,15 @@
             button1.Text = "Confirmar";
             button1.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // txtObservacion
             // 
-            richTextBox1.BackColor = System.Drawing.Color.FromArgb(29, 29, 29);
-            richTextBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            richTextBox1.Location = new System.Drawing.Point(0, 26);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new System.Drawing.Size(217, 130);
-            richTextBox1.TabIndex = 1;
-            richTextBox1.Text = "";
+            txtObservacion.BackColor = System.Drawing.Color.FromArgb(29, 29, 29);
+            txtObservacion.Dock = System.Windows.Forms.DockStyle.Top;
+            txtObservacion.Location = new System.Drawing.Point(0, 26);
+            txtObservacion.Name = "txtObservacion";
+            txtObservacion.Size = new System.Drawing.Size(217, 130);
+            txtObservacion.TabIndex = 1;
+            txtObservacion.Text = "";
             // 
             // label8
             // 
@@ -322,28 +323,28 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(29, 29, 29);
             ClientSize = new System.Drawing.Size(800, 482);
-            Controls.Add(panel7);
-            Controls.Add(panel5);
-            Controls.Add(panel1);
+            Controls.Add(panelObservacion);
+            Controls.Add(Panel1);
+            Controls.Add(panel11);
             Name = "TomarAsistencias";
             Text = "TomarAsistecias";
-            panel1.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
+            panel11.ResumeLayout(false);
+            Panel1.ResumeLayout(false);
+            Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel7.ResumeLayout(false);
+            panelObservacion.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel Panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -355,9 +356,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txtIdentificacion;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panelObservacion;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtObservacion;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Timer timerHora;
     }
