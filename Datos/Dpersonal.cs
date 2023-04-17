@@ -140,25 +140,6 @@ namespace Oruscurso.Datos
                 CONEXIONMAESTRA.cerrar();
             }
         }          
-        public void BuscarAsistenciasId(ref DataTable dt, int Idpersonal)
-        {
-            try
-            {
-                CONEXIONMAESTRA.abrir();
-                SqlDataAdapter da = new SqlDataAdapter("BuscarAsistenciasId", CONEXIONMAESTRA.conectar);
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.AddWithValue("@Idpersonal", Idpersonal);
-                da.Fill(dt);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.StackTrace);
-            }
-            finally
-            {
-                CONEXIONMAESTRA.cerrar();
-            }
-        }
         public bool RestaurarPersonal(Lpersonal parametros)
         {
             try

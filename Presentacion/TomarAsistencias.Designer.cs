@@ -49,7 +49,7 @@
             txtIdentificacion = new System.Windows.Forms.TextBox();
             label2 = new System.Windows.Forms.Label();
             panelObservacion = new System.Windows.Forms.Panel();
-            button1 = new System.Windows.Forms.Button();
+            btnConfirmar = new System.Windows.Forms.Button();
             txtObservacion = new System.Windows.Forms.RichTextBox();
             label8 = new System.Windows.Forms.Label();
             timerHora = new System.Windows.Forms.Timer(components);
@@ -266,7 +266,7 @@
             // 
             // panelObservacion
             // 
-            panelObservacion.Controls.Add(button1);
+            panelObservacion.Controls.Add(btnConfirmar);
             panelObservacion.Controls.Add(txtObservacion);
             panelObservacion.Controls.Add(label8);
             panelObservacion.Location = new System.Drawing.Point(21, 68);
@@ -275,25 +275,28 @@
             panelObservacion.TabIndex = 2;
             panelObservacion.Visible = false;
             // 
-            // button1
+            // btnConfirmar
             // 
-            button1.BackgroundImage = Properties.Resources.rectanguloazul;
-            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button1.ForeColor = System.Drawing.Color.White;
-            button1.Location = new System.Drawing.Point(2, 156);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(89, 30);
-            button1.TabIndex = 2;
-            button1.Text = "Confirmar";
-            button1.UseVisualStyleBackColor = true;
+            btnConfirmar.BackgroundImage = Properties.Resources.rectanguloazul;
+            btnConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            btnConfirmar.FlatAppearance.BorderSize = 0;
+            btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnConfirmar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnConfirmar.ForeColor = System.Drawing.Color.White;
+            btnConfirmar.Location = new System.Drawing.Point(2, 156);
+            btnConfirmar.Name = "btnConfirmar";
+            btnConfirmar.Size = new System.Drawing.Size(89, 30);
+            btnConfirmar.TabIndex = 2;
+            btnConfirmar.Text = "Confirmar";
+            btnConfirmar.UseVisualStyleBackColor = true;
+            btnConfirmar.Click += btnConfirmar_Click;
             // 
             // txtObservacion
             // 
             txtObservacion.BackColor = System.Drawing.Color.FromArgb(29, 29, 29);
             txtObservacion.Dock = System.Windows.Forms.DockStyle.Top;
+            txtObservacion.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtObservacion.ForeColor = System.Drawing.Color.White;
             txtObservacion.Location = new System.Drawing.Point(0, 26);
             txtObservacion.Name = "txtObservacion";
             txtObservacion.Size = new System.Drawing.Size(217, 130);
@@ -357,7 +360,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txtIdentificacion;
         private System.Windows.Forms.Panel panelObservacion;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.RichTextBox txtObservacion;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Timer timerHora;
