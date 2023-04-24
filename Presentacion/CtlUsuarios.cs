@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oruscurso.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,7 @@ namespace Oruscurso.Presentacion
         {
             Limpiar();
             HabilitarPaneles();
+            MostrarModulos();
         }
 
         private void Limpiar()
@@ -37,6 +39,13 @@ namespace Oruscurso.Presentacion
             panelRegistro.BringToFront();
             btnGuardar.Visible = true;
             btnActualizar.Visible = false;
+        }
+        private void MostrarModulos()
+        {
+            Dmodulos funcion = new Dmodulos();
+            DataTable dt = new DataTable();
+            funcion.MostrarModulos(ref dt);
+            dataListadoModulos.DataSource = dt;
         }
     }
 }

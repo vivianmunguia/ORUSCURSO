@@ -17,7 +17,7 @@ namespace Oruscurso
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Presentacion.TomarAsistencias());
+            Application.Run(new Presentacion.MenuPrincipal());
         }
     }
 }
