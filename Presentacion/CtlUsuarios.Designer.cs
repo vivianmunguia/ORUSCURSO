@@ -44,7 +44,7 @@
             Editar = new System.Windows.Forms.DataGridViewImageColumn();
             panelRegistro = new System.Windows.Forms.Panel();
             panelIcono = new System.Windows.Forms.Panel();
-            pictureBox11 = new System.Windows.Forms.PictureBox();
+            AgregarIconoPC = new System.Windows.Forms.PictureBox();
             flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             pictureBox3 = new System.Windows.Forms.PictureBox();
             pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -73,13 +73,14 @@
             label2 = new System.Windows.Forms.Label();
             txtNombre = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
+            dlg = new System.Windows.Forms.OpenFileDialog();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataListadoUsuarios).BeginInit();
             panelRegistro.SuspendLayout();
             panelIcono.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AgregarIconoPC).BeginInit();
             flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -268,25 +269,26 @@
             // panelIcono
             // 
             panelIcono.BackColor = System.Drawing.Color.FromArgb(39, 39, 39);
-            panelIcono.Controls.Add(pictureBox11);
+            panelIcono.Controls.Add(AgregarIconoPC);
             panelIcono.Controls.Add(btnMostrarTodos);
             panelIcono.Controls.Add(flowLayoutPanel2);
             panelIcono.Controls.Add(flowLayoutPanel3);
-            panelIcono.Location = new System.Drawing.Point(545, 203);
+            panelIcono.Location = new System.Drawing.Point(509, 132);
             panelIcono.Name = "panelIcono";
             panelIcono.Size = new System.Drawing.Size(690, 409);
             panelIcono.TabIndex = 12;
             panelIcono.Visible = false;
             // 
-            // pictureBox11
+            // AgregarIconoPC
             // 
-            pictureBox11.Image = (System.Drawing.Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new System.Drawing.Point(31, 286);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new System.Drawing.Size(121, 105);
-            pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            pictureBox11.TabIndex = 5;
-            pictureBox11.TabStop = false;
+            AgregarIconoPC.Image = (System.Drawing.Image)resources.GetObject("AgregarIconoPC.Image");
+            AgregarIconoPC.Location = new System.Drawing.Point(31, 286);
+            AgregarIconoPC.Name = "AgregarIconoPC";
+            AgregarIconoPC.Size = new System.Drawing.Size(121, 105);
+            AgregarIconoPC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            AgregarIconoPC.TabIndex = 5;
+            AgregarIconoPC.TabStop = false;
+            AgregarIconoPC.Click += AgregarIconoPC_Click;
             // 
             // flowLayoutPanel2
             // 
@@ -308,6 +310,7 @@
             pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // pictureBox4
             // 
@@ -318,6 +321,7 @@
             pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 1;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // pictureBox5
             // 
@@ -328,6 +332,7 @@
             pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 2;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
             // pictureBox6
             // 
@@ -338,6 +343,7 @@
             pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 3;
             pictureBox6.TabStop = false;
+            pictureBox6.Click += pictureBox6_Click;
             // 
             // flowLayoutPanel3
             // 
@@ -359,6 +365,7 @@
             pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             pictureBox7.TabIndex = 0;
             pictureBox7.TabStop = false;
+            pictureBox7.Click += pictureBox7_Click;
             // 
             // pictureBox8
             // 
@@ -369,6 +376,7 @@
             pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 1;
             pictureBox8.TabStop = false;
+            pictureBox8.Click += pictureBox8_Click;
             // 
             // pictureBox9
             // 
@@ -379,6 +387,7 @@
             pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             pictureBox9.TabIndex = 2;
             pictureBox9.TabStop = false;
+            pictureBox9.Click += pictureBox9_Click;
             // 
             // pictureBox10
             // 
@@ -389,6 +398,7 @@
             pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             pictureBox10.TabIndex = 3;
             pictureBox10.TabStop = false;
+            pictureBox10.Click += pictureBox10_Click;
             // 
             // lblAnuncioIcono
             // 
@@ -400,6 +410,7 @@
             lblAnuncioIcono.TabIndex = 11;
             lblAnuncioIcono.Text = "Elige un icono";
             lblAnuncioIcono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblAnuncioIcono.Click += lblAnuncioIcono_Click;
             // 
             // PanelBtnGuardarPer
             // 
@@ -471,6 +482,7 @@
             Icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             Icono.TabIndex = 10;
             Icono.TabStop = false;
+            Icono.Click += Icono_Click;
             // 
             // panel5
             // 
@@ -492,7 +504,6 @@
             dataListadoModulos.Dock = System.Windows.Forms.DockStyle.Fill;
             dataListadoModulos.Location = new System.Drawing.Point(0, 0);
             dataListadoModulos.Name = "dataListadoModulos";
-            dataListadoModulos.ReadOnly = true;
             dataListadoModulos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             dataListadoModulos.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataListadoModulos.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -507,7 +518,6 @@
             // 
             Marcar.HeaderText = "Marcar";
             Marcar.Name = "Marcar";
-            Marcar.ReadOnly = true;
             // 
             // label6
             // 
@@ -586,6 +596,10 @@
             label1.TabIndex = 0;
             label1.Text = "Nombre:";
             // 
+            // dlg
+            // 
+            dlg.FileName = "openFileDialog1";
+            // 
             // CtlUsuarios
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -595,6 +609,7 @@
             Controls.Add(panel1);
             Name = "CtlUsuarios";
             Size = new System.Drawing.Size(1083, 569);
+            Load += CtlUsuarios_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -603,7 +618,7 @@
             panelRegistro.ResumeLayout(false);
             panelRegistro.PerformLayout();
             panelIcono.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AgregarIconoPC).EndInit();
             flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -648,11 +663,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dataListadoModulos;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Marcar;
         private System.Windows.Forms.Label lblAnuncioIcono;
         private System.Windows.Forms.PictureBox Icono;
         private System.Windows.Forms.Panel panelIcono;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox AgregarIconoPC;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -667,5 +681,7 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.OpenFileDialog dlg;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Marcar;
     }
 }

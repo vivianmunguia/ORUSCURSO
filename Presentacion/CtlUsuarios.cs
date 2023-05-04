@@ -95,7 +95,7 @@ namespace Oruscurso.Presentacion
             MemoryStream ms = new MemoryStream();
             Icono.Image.Save(ms, Icono.Image.RawFormat);
             parametros.Icono = ms.GetBuffer();
-            
+
             if (funcion.InsertarUsuarios(parametros) == true)
             {
                 ObtenerIdUsuario();
@@ -131,12 +131,114 @@ namespace Oruscurso.Presentacion
             Dusuarios funcion = new Dusuarios();
             funcion.MostrarUsuarios(ref dt);
             dataListadoUsuarios.DataSource = dt;
+            DiseñarDtvUsuarios();
+        }
+
+        private void DiseñarDtvUsuarios()
+        {
+            Bases.DiseñoDtv(ref dataListadoUsuarios);
+            Bases.DiseñoDtvEliminar(ref dataListadoUsuarios);
+            dataListadoUsuarios.Columns[2].Visible = false;
+            dataListadoUsuarios.Columns[5].Visible = false;
+            dataListadoUsuarios.Columns[6].Visible = false;
         }
 
         private void ObtenerIdUsuario()
         {
             Dusuarios funcion = new Dusuarios();
             funcion.ObtenerIdUsuario(ref Idusuario, txtUsuario.Text);
+        }
+
+        private void lblAnuncioIcono_Click(object sender, EventArgs e)
+        {
+            MostrarPanelIcono();
+        }
+
+        private void MostrarPanelIcono()
+        {
+            panelIcono.Visible = true;
+            panelIcono.Dock = DockStyle.Fill;
+            panelIcono.BringToFront();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox3.Image;
+            OcultarPanelIconos();
+        }
+
+        private void OcultarPanelIconos()
+        {
+            panelIcono.Visible = false;
+            lblAnuncioIcono.Visible = false;
+            Icono.Visible = true;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox4.Image;
+            OcultarPanelIconos();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox5.Image;
+            OcultarPanelIconos();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox6.Image;
+            OcultarPanelIconos();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox7.Image;
+            OcultarPanelIconos();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox8.Image;
+            OcultarPanelIconos();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox9.Image;
+            OcultarPanelIconos();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox10.Image;
+            OcultarPanelIconos();
+        }
+
+        private void AgregarIconoPC_Click(object sender, EventArgs e)
+        {
+            dlg.InitialDirectory = ""; //El directorio inicial será en el último en el que se haya estado
+            dlg.Filter = "Imagenes|*.jpg;*.png"; //Se buscan archivos de tipo jpg y png
+            dlg.FilterIndex = 2; //Cantidad de filtros que se tienen
+            dlg.Title = "Cargador de imágenes";
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                Icono.BackgroundImage = null; //Se limpia la imagen que había
+                Icono.Image = new Bitmap(dlg.FileName);
+                OcultarPanelIconos();
+            }
+        }
+
+        private void Icono_Click(object sender, EventArgs e)
+        {
+            MostrarPanelIcono();
+        }
+
+        private void CtlUsuarios_Load(object sender, EventArgs e)
+        {
+            MostrarUsuarios();
         }
     }
 }
