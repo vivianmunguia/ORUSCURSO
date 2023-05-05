@@ -25,3 +25,4 @@ C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK
 C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.csproj.CopyComplete
 C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.Presentacion.TomarAsistencias.resources
 C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.Presentacion.CtlUsuarios.resources
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.Presentacion.Login.resources
