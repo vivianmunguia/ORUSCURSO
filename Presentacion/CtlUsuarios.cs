@@ -50,6 +50,7 @@ namespace Oruscurso.Presentacion
             DataTable dt = new DataTable();
             funcion.MostrarModulos(ref dt);
             dataListadoModulos.DataSource = dt;
+            dataListadoModulos.Columns[1].Visible = false;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -239,6 +240,37 @@ namespace Oruscurso.Presentacion
         private void CtlUsuarios_Load(object sender, EventArgs e)
         {
             MostrarUsuarios();
+        }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            panelRegistro.Visible = false;
+        }
+
+        private void btnVolverIcono_Click(object sender, EventArgs e)
+        {
+            OcultarPanelIconos();
+            if (Icono.Image == null)
+            {
+                panelIcono.Visible = false;
+                lblAnuncioIcono.Visible = true;
+            }
         }
     }
 }

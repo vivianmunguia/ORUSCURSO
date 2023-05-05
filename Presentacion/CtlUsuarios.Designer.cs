@@ -38,7 +38,7 @@
             pictureBox1 = new System.Windows.Forms.PictureBox();
             panel3 = new System.Windows.Forms.Panel();
             txtBuscador = new System.Windows.Forms.TextBox();
-            btnMostrarTodos = new System.Windows.Forms.Button();
+            btnVolverIcono = new System.Windows.Forms.Button();
             dataListadoUsuarios = new System.Windows.Forms.DataGridView();
             Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             Editar = new System.Windows.Forms.DataGridViewImageColumn();
@@ -190,18 +190,19 @@
             txtBuscador.Size = new System.Drawing.Size(279, 22);
             txtBuscador.TabIndex = 0;
             // 
-            // btnMostrarTodos
+            // btnVolverIcono
             // 
-            btnMostrarTodos.FlatAppearance.BorderSize = 0;
-            btnMostrarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnMostrarTodos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            btnMostrarTodos.ForeColor = System.Drawing.Color.White;
-            btnMostrarTodos.Location = new System.Drawing.Point(173, 286);
-            btnMostrarTodos.Name = "btnMostrarTodos";
-            btnMostrarTodos.Size = new System.Drawing.Size(146, 37);
-            btnMostrarTodos.TabIndex = 9;
-            btnMostrarTodos.Text = "Volver";
-            btnMostrarTodos.UseVisualStyleBackColor = true;
+            btnVolverIcono.FlatAppearance.BorderSize = 0;
+            btnVolverIcono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnVolverIcono.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnVolverIcono.ForeColor = System.Drawing.Color.White;
+            btnVolverIcono.Location = new System.Drawing.Point(173, 286);
+            btnVolverIcono.Name = "btnVolverIcono";
+            btnVolverIcono.Size = new System.Drawing.Size(146, 37);
+            btnVolverIcono.TabIndex = 9;
+            btnVolverIcono.Text = "Volver";
+            btnVolverIcono.UseVisualStyleBackColor = true;
+            btnVolverIcono.Click += btnVolverIcono_Click;
             // 
             // dataListadoUsuarios
             // 
@@ -270,7 +271,7 @@
             // 
             panelIcono.BackColor = System.Drawing.Color.FromArgb(39, 39, 39);
             panelIcono.Controls.Add(AgregarIconoPC);
-            panelIcono.Controls.Add(btnMostrarTodos);
+            panelIcono.Controls.Add(btnVolverIcono);
             panelIcono.Controls.Add(flowLayoutPanel2);
             panelIcono.Controls.Add(flowLayoutPanel3);
             panelIcono.Location = new System.Drawing.Point(509, 132);
@@ -473,6 +474,7 @@
             btnVolver.TabIndex = 9;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = true;
+            btnVolver.Click += btnVolver_Click;
             // 
             // Icono
             // 
@@ -551,9 +553,11 @@
             // txtContraseña
             // 
             txtContraseña.Location = new System.Drawing.Point(140, 90);
+            txtContraseña.MaxLength = 6;
             txtContraseña.Name = "txtContraseña";
             txtContraseña.Size = new System.Drawing.Size(250, 29);
             txtContraseña.TabIndex = 5;
+            txtContraseña.KeyPress += txtContraseña_KeyPress;
             // 
             // label3
             // 
@@ -644,7 +648,7 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnMostrarTodos;
+        private System.Windows.Forms.Button btnVolverIcono;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtBuscador;
