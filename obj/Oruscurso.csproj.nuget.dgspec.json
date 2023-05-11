@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andy_\\Documents\\Cursos\\Xamarin\\Xamarin básico Una introducción al SDK de Microsoft\\Oruscurso\\Oruscurso.csproj": {}
+    "C:\\Users\\andy_\\OneDrive\\Documentos\\Cursos\\Xamarin\\Xamarin básico Una introducción al SDK de Microsoft\\Oruscurso\\Oruscurso.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andy_\\Documents\\Cursos\\Xamarin\\Xamarin básico Una introducción al SDK de Microsoft\\Oruscurso\\Oruscurso.csproj": {
+    "C:\\Users\\andy_\\OneDrive\\Documentos\\Cursos\\Xamarin\\Xamarin básico Una introducción al SDK de Microsoft\\Oruscurso\\Oruscurso.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andy_\\Documents\\Cursos\\Xamarin\\Xamarin básico Una introducción al SDK de Microsoft\\Oruscurso\\Oruscurso.csproj",
+        "projectUniqueName": "C:\\Users\\andy_\\OneDrive\\Documentos\\Cursos\\Xamarin\\Xamarin básico Una introducción al SDK de Microsoft\\Oruscurso\\Oruscurso.csproj",
         "projectName": "Oruscurso",
-        "projectPath": "C:\\Users\\andy_\\Documents\\Cursos\\Xamarin\\Xamarin básico Una introducción al SDK de Microsoft\\Oruscurso\\Oruscurso.csproj",
+        "projectPath": "C:\\Users\\andy_\\OneDrive\\Documentos\\Cursos\\Xamarin\\Xamarin básico Una introducción al SDK de Microsoft\\Oruscurso\\Oruscurso.csproj",
         "packagesPath": "C:\\Users\\andy_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andy_\\Documents\\Cursos\\Xamarin\\Xamarin básico Una introducción al SDK de Microsoft\\Oruscurso\\obj\\",
+        "outputPath": "C:\\Users\\andy_\\OneDrive\\Documentos\\Cursos\\Xamarin\\Xamarin básico Una introducción al SDK de Microsoft\\Oruscurso\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andy_\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,7 +82,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
