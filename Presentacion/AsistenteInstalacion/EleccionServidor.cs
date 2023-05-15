@@ -14,5 +14,19 @@ namespace Oruscurso.Presentacion.AsistenteInstalacion
         {
             InitializeComponent();
         }
+
+        private void btnPrincipal_Click(object sender, EventArgs e)
+        {
+            Dispose();
+            InstalacionBd frm = new InstalacionBd();
+            frm.ShowDialog();
+        }
+
+        private void btnRemoto_Click(object sender, EventArgs e)
+        {
+            Dispose();
+            ConexionRemota frm = new ConexionRemota();
+            frm.ShowDialog();
+        }
     }
 }
