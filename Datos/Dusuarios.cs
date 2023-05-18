@@ -73,5 +73,22 @@ namespace Oruscurso.Datos
                 CONEXIONMAESTRA.cerrar();
             }
         }
+
+        public void VerificarUsuarios(ref string Indicador)
+        {
+            try
+            {
+                int Iduser;
+                CONEXIONMAESTRA.abrir();
+                SqlCommand da = new SqlCommand("SELECT idUsuario FROM Usuarios", CONEXIONMAESTRA.conectar);
+                Iduser = Convert.ToInt32(da.ExecuteScalar());
+                CONEXIONMAESTRA.cerrar();
+                Indicador = "Correcto";
+            }
+            catch (Exception ex)
+            {
+                Indicador = "Incorrecto";
+            }
+        }
     }
 }

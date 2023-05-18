@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qnQa+gN1VJrjl+jqpncNZjdSxzVjJ5YgFx2OkXey33HXZQz3gttEV5tfkq7cod0fISdYp0hMhmGlM1Ray/uK7A==",
+  "dgSpecHash": "nTjF2J4TspK4ySrJ5RMBW/lLYlgGPPyDCteiKYBNq8cPlDWWtx0IW20HcKOMEtle+ManACZ1Fed9inQ1xXrmpg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\andy_\\Documents\\Cursos\\Xamarin\\Xamarin básico Una introducción al SDK de Microsoft\\ORUSCURSO\\Oruscurso.csproj",
+  "projectFilePath": "C:\\Users\\andy_\\Documents\\Cursos\\Xamarin\\Xamarin básico Una introducción al SDK de Microsoft\\Oruscurso\\Oruscurso.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andy_\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\andy_\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

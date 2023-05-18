@@ -9,7 +9,8 @@ namespace Oruscurso.Datos
 {
     public class CONEXIONMAESTRA
     {
-        public static string conexion = @"Data source=LAPTOP-NLHO6AEK\SQLEXPRESS; Initial Catalog=ORUS369; Integrated Security=true";
+        //public static string conexion = @"Data source=LAPTOP-NLHO6AEK\SQLEXPRESS; Initial Catalog=ORUS369; Integrated Security=true";
+        public static string conexion = @"Data source=DESKTOP-SJ9JMU9\SQLEXPRESS; Initial Catalog=ORUS369; Integrated Security=true";
         public static SqlConnection conectar = new SqlConnection(conexion);
         public static void abrir()
         {

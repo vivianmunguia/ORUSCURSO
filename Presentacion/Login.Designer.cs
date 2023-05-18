@@ -52,15 +52,15 @@
             panel6 = new System.Windows.Forms.Panel();
             txtIdentificacion = new System.Windows.Forms.TextBox();
             label2 = new System.Windows.Forms.Label();
-            panel4 = new System.Windows.Forms.Panel();
-            label3 = new System.Windows.Forms.Label();
+            PanelUsuarios = new System.Windows.Forms.Panel();
             flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            label3 = new System.Windows.Forms.Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             panel3.SuspendLayout();
-            panel4.SuspendLayout();
+            PanelUsuarios.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -411,14 +411,23 @@
             label2.TabIndex = 0;
             label2.Text = "Inicio de sesión";
             // 
-            // panel4
+            // PanelUsuarios
             // 
-            panel4.Controls.Add(flowLayoutPanel2);
-            panel4.Controls.Add(label3);
-            panel4.Location = new System.Drawing.Point(422, 135);
-            panel4.Name = "panel4";
-            panel4.Size = new System.Drawing.Size(347, 259);
-            panel4.TabIndex = 4;
+            PanelUsuarios.Controls.Add(flowLayoutPanel2);
+            PanelUsuarios.Controls.Add(label3);
+            PanelUsuarios.Location = new System.Drawing.Point(422, 135);
+            PanelUsuarios.Name = "PanelUsuarios";
+            PanelUsuarios.Size = new System.Drawing.Size(347, 259);
+            PanelUsuarios.TabIndex = 4;
+            PanelUsuarios.Visible = false;
+            // 
+            // flowLayoutPanel2
+            // 
+            flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            flowLayoutPanel2.Location = new System.Drawing.Point(0, 63);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new System.Drawing.Size(347, 196);
+            flowLayoutPanel2.TabIndex = 2;
             // 
             // label3
             // 
@@ -431,32 +440,25 @@
             label3.TabIndex = 1;
             label3.Text = "¿Quién está iniciando sesión?";
             // 
-            // flowLayoutPanel2
-            // 
-            flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            flowLayoutPanel2.Location = new System.Drawing.Point(0, 63);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new System.Drawing.Size(347, 196);
-            flowLayoutPanel2.TabIndex = 2;
-            // 
             // Login
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(20, 20, 20);
             ClientSize = new System.Drawing.Size(800, 609);
-            Controls.Add(panel4);
+            Controls.Add(PanelUsuarios);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Login";
             Text = "Login";
+            Load += Login_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            panel4.ResumeLayout(false);
+            PanelUsuarios.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -485,7 +487,7 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button btnVolverIcono;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel PanelUsuarios;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label3;
     }
