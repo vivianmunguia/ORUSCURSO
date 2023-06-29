@@ -11,9 +11,11 @@ Screen where we can add a new user selecting a position.
 ![imagen](https://github.com/vivianmunguia/ORUSCURSO/assets/15255979/44886eda-b98c-44c3-a6ed-afcc3b355112)
 
 We can also add new positions.
+<br>
 ![imagen](https://github.com/vivianmunguia/ORUSCURSO/assets/15255979/13c3c285-3255-418c-9fdd-8b99753437da)
 
 Screen where we can add users.
+<br>
 ![imagen](https://github.com/vivianmunguia/ORUSCURSO/assets/15255979/4af60d16-2eb1-45b6-8a19-206138b4f84f)
 
 Screen where employees can take attendance.
