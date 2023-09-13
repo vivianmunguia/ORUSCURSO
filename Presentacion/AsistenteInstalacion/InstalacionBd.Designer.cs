@@ -28,61 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstalacionBd));
             panel1 = new System.Windows.Forms.Panel();
             pictureBox1 = new System.Windows.Forms.PictureBox();
-            label1 = new System.Windows.Forms.Label();
-            panel2 = new System.Windows.Forms.Panel();
-            pictureBox3 = new System.Windows.Forms.PictureBox();
-            panel4 = new System.Windows.Forms.Panel();
+            label2 = new System.Windows.Forms.Label();
+            Panel2 = new System.Windows.Forms.Panel();
+            Panel4 = new System.Windows.Forms.Panel();
+            Panel6 = new System.Windows.Forms.Panel();
+            label3 = new System.Windows.Forms.Label();
+            panel9 = new System.Windows.Forms.Panel();
             label7 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
-            label3 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
+            pictureBox3 = new System.Windows.Forms.PictureBox();
+            label1 = new System.Windows.Forms.Label();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             panel3 = new System.Windows.Forms.Panel();
             btnPrincipal = new System.Windows.Forms.Button();
-            panel5 = new System.Windows.Forms.Panel();
+            Panel5 = new System.Windows.Forms.Panel();
+            seg3 = new System.Windows.Forms.Label();
             label16 = new System.Windows.Forms.Label();
             panel8 = new System.Windows.Forms.Panel();
-            richTextBox4 = new System.Windows.Forms.RichTextBox();
+            txtCrearUsuarioDb = new System.Windows.Forms.RichTextBox();
             richTextBox3 = new System.Windows.Forms.RichTextBox();
             label15 = new System.Windows.Forms.Label();
             label14 = new System.Windows.Forms.Label();
             panel7 = new System.Windows.Forms.Panel();
-            richTextBox2 = new System.Windows.Forms.RichTextBox();
+            txtCrearProcedimientos = new System.Windows.Forms.RichTextBox();
             label13 = new System.Windows.Forms.Label();
-            panel6 = new System.Windows.Forms.Panel();
-            richTextBox1 = new System.Windows.Forms.RichTextBox();
-            textBox5 = new System.Windows.Forms.TextBox();
+            panel10 = new System.Windows.Forms.Panel();
+            txtEliminarBase = new System.Windows.Forms.RichTextBox();
+            txtservidor = new System.Windows.Forms.Label();
+            mil3 = new System.Windows.Forms.Label();
+            txtnombre_scrypt = new System.Windows.Forms.TextBox();
             label12 = new System.Windows.Forms.Label();
-            textBox4 = new System.Windows.Forms.TextBox();
+            txtBaseDeDatos = new System.Windows.Forms.TextBox();
             label11 = new System.Windows.Forms.Label();
-            textBox3 = new System.Windows.Forms.TextBox();
+            lblcontraseña = new System.Windows.Forms.TextBox();
             label10 = new System.Windows.Forms.Label();
-            textBox2 = new System.Windows.Forms.TextBox();
+            txtUsuario = new System.Windows.Forms.TextBox();
             label9 = new System.Windows.Forms.Label();
-            textBox1 = new System.Windows.Forms.TextBox();
+            lblnombredeservicio = new System.Windows.Forms.TextBox();
             label8 = new System.Windows.Forms.Label();
+            timer2 = new System.Windows.Forms.Timer(components);
+            timer3 = new System.Windows.Forms.Timer(components);
+            timer4 = new System.Windows.Forms.Timer(components);
+            TimeCRARINI = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel2.SuspendLayout();
+            Panel2.SuspendLayout();
+            Panel4.SuspendLayout();
+            Panel6.SuspendLayout();
+            panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel5.SuspendLayout();
+            Panel5.SuspendLayout();
             panel8.SuspendLayout();
             panel7.SuspendLayout();
-            panel6.SuspendLayout();
+            panel10.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = System.Drawing.Color.FromArgb(29, 29, 29);
             panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label2);
             panel1.Dock = System.Windows.Forms.DockStyle.Top;
             panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
@@ -100,61 +112,79 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // label1
+            // label2
             // 
-            label1.Dock = System.Windows.Forms.DockStyle.Left;
-            label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.ForeColor = System.Drawing.Color.White;
-            label1.Location = new System.Drawing.Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(142, 60);
-            label1.TabIndex = 1;
-            label1.Text = "Orus 369";
-            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label2.Dock = System.Windows.Forms.DockStyle.Left;
+            label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label2.ForeColor = System.Drawing.Color.White;
+            label2.Location = new System.Drawing.Point(0, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(142, 60);
+            label2.TabIndex = 1;
+            label2.Text = "Orus 369";
+            label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel2
+            // Panel2
             // 
-            panel2.Controls.Add(pictureBox3);
-            panel2.Controls.Add(panel4);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(pictureBox2);
-            panel2.Controls.Add(panel3);
-            panel2.Controls.Add(btnPrincipal);
-            panel2.Location = new System.Drawing.Point(142, 76);
-            panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(349, 419);
-            panel2.TabIndex = 6;
+            Panel2.Controls.Add(Panel4);
+            Panel2.Controls.Add(btnPrincipal);
+            Panel2.Location = new System.Drawing.Point(142, 76);
+            Panel2.Name = "Panel2";
+            Panel2.Size = new System.Drawing.Size(349, 419);
+            Panel2.TabIndex = 6;
             // 
-            // pictureBox3
+            // Panel4
             // 
-            pictureBox3.BackColor = System.Drawing.Color.Black;
-            pictureBox3.Image = (System.Drawing.Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new System.Drawing.Point(0, 257);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new System.Drawing.Size(349, 131);
-            pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 12;
-            pictureBox3.TabStop = false;
+            Panel4.Controls.Add(Panel6);
+            Panel4.Controls.Add(pictureBox3);
+            Panel4.Controls.Add(label1);
+            Panel4.Controls.Add(pictureBox2);
+            Panel4.Controls.Add(panel3);
+            Panel4.Location = new System.Drawing.Point(0, 56);
+            Panel4.Name = "Panel4";
+            Panel4.Size = new System.Drawing.Size(349, 363);
+            Panel4.TabIndex = 8;
             // 
-            // panel4
+            // Panel6
             // 
-            panel4.BackColor = System.Drawing.Color.FromArgb(20, 20, 20);
-            panel4.Controls.Add(label7);
-            panel4.Controls.Add(label6);
-            panel4.Controls.Add(label5);
-            panel4.Controls.Add(label4);
-            panel4.Location = new System.Drawing.Point(167, 212);
-            panel4.Name = "panel4";
-            panel4.Size = new System.Drawing.Size(182, 50);
-            panel4.TabIndex = 11;
+            Panel6.Controls.Add(label3);
+            Panel6.Controls.Add(panel9);
+            Panel6.Location = new System.Drawing.Point(0, 151);
+            Panel6.Name = "Panel6";
+            Panel6.Size = new System.Drawing.Size(350, 65);
+            Panel6.TabIndex = 8;
+            // 
+            // label3
+            // 
+            label3.BackColor = System.Drawing.Color.FromArgb(20, 20, 20);
+            label3.Dock = System.Windows.Forms.DockStyle.Left;
+            label3.ForeColor = System.Drawing.Color.White;
+            label3.Location = new System.Drawing.Point(0, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(169, 65);
+            label3.TabIndex = 12;
+            label3.Text = "Tiempo estimado 6 minutos";
+            label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel9
+            // 
+            panel9.BackColor = System.Drawing.Color.FromArgb(20, 20, 20);
+            panel9.Controls.Add(label7);
+            panel9.Controls.Add(label6);
+            panel9.Controls.Add(label5);
+            panel9.Controls.Add(label4);
+            panel9.Dock = System.Windows.Forms.DockStyle.Right;
+            panel9.Location = new System.Drawing.Point(168, 0);
+            panel9.Name = "panel9";
+            panel9.Size = new System.Drawing.Size(182, 65);
+            panel9.TabIndex = 13;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label7.ForeColor = System.Drawing.Color.White;
-            label7.Location = new System.Drawing.Point(107, 23);
+            label7.Location = new System.Drawing.Point(107, 30);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(25, 19);
             label7.TabIndex = 3;
@@ -165,7 +195,7 @@
             label6.AutoSize = true;
             label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label6.ForeColor = System.Drawing.Color.White;
-            label6.Location = new System.Drawing.Point(44, 23);
+            label6.Location = new System.Drawing.Point(44, 30);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(25, 19);
             label6.TabIndex = 2;
@@ -175,7 +205,7 @@
             // 
             label5.AutoSize = true;
             label5.ForeColor = System.Drawing.Color.White;
-            label5.Location = new System.Drawing.Point(107, 8);
+            label5.Location = new System.Drawing.Point(107, 15);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(25, 15);
             label5.TabIndex = 1;
@@ -185,56 +215,57 @@
             // 
             label4.AutoSize = true;
             label4.ForeColor = System.Drawing.Color.White;
-            label4.Location = new System.Drawing.Point(42, 8);
+            label4.Location = new System.Drawing.Point(42, 15);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(28, 15);
             label4.TabIndex = 0;
             label4.Text = "min";
             // 
-            // label3
+            // pictureBox3
             // 
-            label3.BackColor = System.Drawing.Color.FromArgb(20, 20, 20);
-            label3.ForeColor = System.Drawing.Color.White;
-            label3.Location = new System.Drawing.Point(0, 212);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(169, 50);
-            label3.TabIndex = 10;
-            label3.Text = "Tiempo estimado 6 minutos";
-            label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            pictureBox3.BackColor = System.Drawing.Color.Black;
+            pictureBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            pictureBox3.Image = (System.Drawing.Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new System.Drawing.Point(0, 211);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new System.Drawing.Size(349, 152);
+            pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 14;
+            pictureBox3.TabStop = false;
             // 
-            // label2
+            // label1
             // 
-            label2.BackColor = System.Drawing.Color.FromArgb(20, 20, 20);
-            label2.Dock = System.Windows.Forms.DockStyle.Top;
-            label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label2.ForeColor = System.Drawing.Color.White;
-            label2.Location = new System.Drawing.Point(0, 117);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(349, 95);
-            label2.TabIndex = 9;
-            label2.Text = "Instalando Servidor... \r\n\r\nNo cierre esta ventana, se cerrará automáticamente cuando esté todo listo\r\n";
-            label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.BackColor = System.Drawing.Color.FromArgb(20, 20, 20);
+            label1.Dock = System.Windows.Forms.DockStyle.Top;
+            label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.ForeColor = System.Drawing.Color.White;
+            label1.Location = new System.Drawing.Point(0, 60);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(349, 95);
+            label1.TabIndex = 10;
+            label1.Text = "Instalando Servidor... \r\n\r\nNo cierre esta ventana, se cerrará automáticamente cuando esté todo listo\r\n";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
             pictureBox2.BackColor = System.Drawing.Color.FromArgb(20, 20, 20);
             pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
             pictureBox2.Image = (System.Drawing.Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new System.Drawing.Point(0, 71);
+            pictureBox2.Location = new System.Drawing.Point(0, 14);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new System.Drawing.Size(349, 46);
             pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 8;
+            pictureBox2.TabIndex = 9;
             pictureBox2.TabStop = false;
             // 
             // panel3
             // 
             panel3.BackColor = System.Drawing.Color.FromArgb(20, 20, 20);
             panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            panel3.Location = new System.Drawing.Point(0, 57);
+            panel3.Location = new System.Drawing.Point(0, 0);
             panel3.Name = "panel3";
             panel3.Size = new System.Drawing.Size(349, 14);
-            panel3.TabIndex = 7;
+            panel3.TabIndex = 8;
             // 
             // btnPrincipal
             // 
@@ -253,30 +284,40 @@
             btnPrincipal.Text = "Instalar Servidor";
             btnPrincipal.UseVisualStyleBackColor = false;
             // 
-            // panel5
+            // Panel5
             // 
-            panel5.Controls.Add(label16);
-            panel5.Controls.Add(panel8);
-            panel5.Controls.Add(richTextBox3);
-            panel5.Controls.Add(label15);
-            panel5.Controls.Add(label14);
-            panel5.Controls.Add(panel7);
-            panel5.Controls.Add(label13);
-            panel5.Controls.Add(panel6);
-            panel5.Controls.Add(textBox5);
-            panel5.Controls.Add(label12);
-            panel5.Controls.Add(textBox4);
-            panel5.Controls.Add(label11);
-            panel5.Controls.Add(textBox3);
-            panel5.Controls.Add(label10);
-            panel5.Controls.Add(textBox2);
-            panel5.Controls.Add(label9);
-            panel5.Controls.Add(textBox1);
-            panel5.Controls.Add(label8);
-            panel5.Location = new System.Drawing.Point(503, 76);
-            panel5.Name = "panel5";
-            panel5.Size = new System.Drawing.Size(665, 419);
-            panel5.TabIndex = 7;
+            Panel5.Controls.Add(seg3);
+            Panel5.Controls.Add(label16);
+            Panel5.Controls.Add(panel8);
+            Panel5.Controls.Add(richTextBox3);
+            Panel5.Controls.Add(label15);
+            Panel5.Controls.Add(label14);
+            Panel5.Controls.Add(panel7);
+            Panel5.Controls.Add(label13);
+            Panel5.Controls.Add(panel10);
+            Panel5.Controls.Add(txtnombre_scrypt);
+            Panel5.Controls.Add(label12);
+            Panel5.Controls.Add(txtBaseDeDatos);
+            Panel5.Controls.Add(label11);
+            Panel5.Controls.Add(lblcontraseña);
+            Panel5.Controls.Add(label10);
+            Panel5.Controls.Add(txtUsuario);
+            Panel5.Controls.Add(label9);
+            Panel5.Controls.Add(lblnombredeservicio);
+            Panel5.Controls.Add(label8);
+            Panel5.Location = new System.Drawing.Point(503, 76);
+            Panel5.Name = "Panel5";
+            Panel5.Size = new System.Drawing.Size(665, 419);
+            Panel5.TabIndex = 7;
+            // 
+            // seg3
+            // 
+            seg3.AutoSize = true;
+            seg3.Location = new System.Drawing.Point(509, 170);
+            seg3.Name = "seg3";
+            seg3.Size = new System.Drawing.Size(44, 15);
+            seg3.TabIndex = 17;
+            seg3.Text = "label17";
             // 
             // label16
             // 
@@ -291,19 +332,19 @@
             // panel8
             // 
             panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel8.Controls.Add(richTextBox4);
+            panel8.Controls.Add(txtCrearUsuarioDb);
             panel8.Location = new System.Drawing.Point(350, 197);
             panel8.Name = "panel8";
-            panel8.Size = new System.Drawing.Size(311, 118);
+            panel8.Size = new System.Drawing.Size(311, 196);
             panel8.TabIndex = 16;
             // 
-            // richTextBox4
+            // txtCrearUsuarioDb
             // 
-            richTextBox4.Location = new System.Drawing.Point(3, 32);
-            richTextBox4.Name = "richTextBox4";
-            richTextBox4.Size = new System.Drawing.Size(303, 80);
-            richTextBox4.TabIndex = 11;
-            richTextBox4.Text = resources.GetString("richTextBox4.Text");
+            txtCrearUsuarioDb.Location = new System.Drawing.Point(3, 32);
+            txtCrearUsuarioDb.Name = "txtCrearUsuarioDb";
+            txtCrearUsuarioDb.Size = new System.Drawing.Size(303, 159);
+            txtCrearUsuarioDb.TabIndex = 11;
+            txtCrearUsuarioDb.Text = resources.GetString("txtCrearUsuarioDb.Text");
             // 
             // richTextBox3
             // 
@@ -311,7 +352,7 @@
             richTextBox3.Name = "richTextBox3";
             richTextBox3.Size = new System.Drawing.Size(311, 96);
             richTextBox3.TabIndex = 14;
-            richTextBox3.Text = "";
+            richTextBox3.Text = resources.GetString("richTextBox3.Text");
             // 
             // label15
             // 
@@ -336,19 +377,19 @@
             // panel7
             // 
             panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel7.Controls.Add(richTextBox2);
+            panel7.Controls.Add(txtCrearProcedimientos);
             panel7.Location = new System.Drawing.Point(30, 191);
             panel7.Name = "panel7";
             panel7.Size = new System.Drawing.Size(311, 100);
             panel7.TabIndex = 12;
             // 
-            // richTextBox2
+            // txtCrearProcedimientos
             // 
-            richTextBox2.Location = new System.Drawing.Point(3, 15);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new System.Drawing.Size(303, 80);
-            richTextBox2.TabIndex = 11;
-            richTextBox2.Text = resources.GetString("richTextBox2.Text");
+            txtCrearProcedimientos.Location = new System.Drawing.Point(3, 15);
+            txtCrearProcedimientos.Name = "txtCrearProcedimientos";
+            txtCrearProcedimientos.Size = new System.Drawing.Size(303, 80);
+            txtCrearProcedimientos.TabIndex = 11;
+            txtCrearProcedimientos.Text = resources.GetString("txtCrearProcedimientos.Text");
             // 
             // label13
             // 
@@ -360,30 +401,51 @@
             label13.TabIndex = 0;
             label13.Text = "Script para Eliminar la Base de datos";
             // 
-            // panel6
+            // panel10
             // 
-            panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel6.Controls.Add(richTextBox1);
-            panel6.Location = new System.Drawing.Point(359, 55);
-            panel6.Name = "panel6";
-            panel6.Size = new System.Drawing.Size(254, 100);
-            panel6.TabIndex = 10;
+            panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel10.Controls.Add(txtEliminarBase);
+            panel10.Controls.Add(txtservidor);
+            panel10.Controls.Add(mil3);
+            panel10.Location = new System.Drawing.Point(359, 55);
+            panel10.Name = "panel10";
+            panel10.Size = new System.Drawing.Size(254, 100);
+            panel10.TabIndex = 10;
             // 
-            // richTextBox1
+            // txtEliminarBase
             // 
-            richTextBox1.Location = new System.Drawing.Point(3, 15);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new System.Drawing.Size(246, 80);
-            richTextBox1.TabIndex = 11;
-            richTextBox1.Text = "alter database BASEADACURSO set single_user with rollback immediate\nDROP DATABASE BASEADACURSO";
+            txtEliminarBase.Location = new System.Drawing.Point(3, 15);
+            txtEliminarBase.Name = "txtEliminarBase";
+            txtEliminarBase.Size = new System.Drawing.Size(246, 80);
+            txtEliminarBase.TabIndex = 11;
+            txtEliminarBase.Text = "alter database BASEADACURSO set single_user with rollback immediate\nDROP DATABASE BASEADACURSO";
             // 
-            // textBox5
+            // txtservidor
             // 
-            textBox5.Location = new System.Drawing.Point(174, 146);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new System.Drawing.Size(100, 23);
-            textBox5.TabIndex = 9;
-            textBox5.Text = "ScriptORUS";
+            txtservidor.AutoSize = true;
+            txtservidor.ForeColor = System.Drawing.Color.White;
+            txtservidor.Location = new System.Drawing.Point(107, 66);
+            txtservidor.Name = "txtservidor";
+            txtservidor.Size = new System.Drawing.Size(22, 15);
+            txtservidor.TabIndex = 17;
+            txtservidor.Text = "---";
+            // 
+            // mil3
+            // 
+            mil3.AutoSize = true;
+            mil3.Location = new System.Drawing.Point(206, 31);
+            mil3.Name = "mil3";
+            mil3.Size = new System.Drawing.Size(30, 15);
+            mil3.TabIndex = 17;
+            mil3.Text = "mil3";
+            // 
+            // txtnombre_scrypt
+            // 
+            txtnombre_scrypt.Location = new System.Drawing.Point(174, 146);
+            txtnombre_scrypt.Name = "txtnombre_scrypt";
+            txtnombre_scrypt.Size = new System.Drawing.Size(100, 23);
+            txtnombre_scrypt.TabIndex = 9;
+            txtnombre_scrypt.Text = "ScriptORUS";
             // 
             // label12
             // 
@@ -395,13 +457,13 @@
             label12.TabIndex = 8;
             label12.Text = "Nombre de Scrypt:";
             // 
-            // textBox4
+            // txtBaseDeDatos
             // 
-            textBox4.Location = new System.Drawing.Point(174, 114);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new System.Drawing.Size(100, 23);
-            textBox4.TabIndex = 7;
-            textBox4.Text = "ORUS369";
+            txtBaseDeDatos.Location = new System.Drawing.Point(174, 114);
+            txtBaseDeDatos.Name = "txtBaseDeDatos";
+            txtBaseDeDatos.Size = new System.Drawing.Size(100, 23);
+            txtBaseDeDatos.TabIndex = 7;
+            txtBaseDeDatos.Text = "ORUS369";
             // 
             // label11
             // 
@@ -413,13 +475,13 @@
             label11.TabIndex = 6;
             label11.Text = "Base de datos:";
             // 
-            // textBox3
+            // lblcontraseña
             // 
-            textBox3.Location = new System.Drawing.Point(174, 83);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new System.Drawing.Size(100, 23);
-            textBox3.TabIndex = 5;
-            textBox3.Text = "orus369";
+            lblcontraseña.Location = new System.Drawing.Point(174, 83);
+            lblcontraseña.Name = "lblcontraseña";
+            lblcontraseña.Size = new System.Drawing.Size(100, 23);
+            lblcontraseña.TabIndex = 5;
+            lblcontraseña.Text = "orus369";
             // 
             // label10
             // 
@@ -431,13 +493,13 @@
             label10.TabIndex = 4;
             label10.Text = "Contraseña SQL:";
             // 
-            // textBox2
+            // txtUsuario
             // 
-            textBox2.Location = new System.Drawing.Point(174, 52);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(100, 23);
-            textBox2.TabIndex = 3;
-            textBox2.Text = "orus";
+            txtUsuario.Location = new System.Drawing.Point(174, 52);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new System.Drawing.Size(100, 23);
+            txtUsuario.TabIndex = 3;
+            txtUsuario.Text = "orus";
             // 
             // label9
             // 
@@ -449,13 +511,13 @@
             label9.TabIndex = 2;
             label9.Text = "Usuario:";
             // 
-            // textBox1
+            // lblnombredeservicio
             // 
-            textBox1.Location = new System.Drawing.Point(174, 21);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(100, 23);
-            textBox1.TabIndex = 1;
-            textBox1.Text = "SQLEXPRESS";
+            lblnombredeservicio.Location = new System.Drawing.Point(174, 21);
+            lblnombredeservicio.Name = "lblnombredeservicio";
+            lblnombredeservicio.Size = new System.Drawing.Size(100, 23);
+            lblnombredeservicio.TabIndex = 1;
+            lblnombredeservicio.Text = "SQLEXPRESS";
             // 
             // label8
             // 
@@ -467,29 +529,50 @@
             label8.TabIndex = 0;
             label8.Text = "Nombre de instancia:";
             // 
+            // timer2
+            // 
+            timer2.Interval = 10;
+            // 
+            // timer3
+            // 
+            timer3.Interval = 10;
+            // 
+            // timer4
+            // 
+            timer4.Interval = 10;
+            timer4.Tick += timer4_Tick;
+            // 
+            // TimeCRARINI
+            // 
+            TimeCRARINI.Interval = 10;
+            // 
             // InstalacionBd
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.Black;
             ClientSize = new System.Drawing.Size(1182, 547);
-            Controls.Add(panel5);
-            Controls.Add(panel2);
+            Controls.Add(Panel5);
+            Controls.Add(Panel2);
             Controls.Add(panel1);
             Name = "InstalacionBd";
             Text = "InstalacionBd";
+            Load += InstalacionBd_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel2.ResumeLayout(false);
+            Panel2.ResumeLayout(false);
+            Panel4.ResumeLayout(false);
+            Panel6.ResumeLayout(false);
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
+            Panel5.ResumeLayout(false);
+            Panel5.PerformLayout();
             panel8.ResumeLayout(false);
             panel7.ResumeLayout(false);
-            panel6.ResumeLayout(false);
+            panel10.ResumeLayout(false);
+            panel10.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -497,40 +580,49 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel Panel2;
+        private System.Windows.Forms.Button btnPrincipal;
+        private System.Windows.Forms.Panel Panel5;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.RichTextBox txtCrearUsuarioDb;
+        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.RichTextBox txtCrearProcedimientos;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.RichTextBox txtEliminarBase;
+        private System.Windows.Forms.TextBox txtnombre_scrypt;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtBaseDeDatos;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox lblcontraseña;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox lblnombredeservicio;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Timer timer4;
+        private System.Windows.Forms.Timer TimeCRARINI;
+        private System.Windows.Forms.Panel Panel4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnPrincipal;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label txtservidor;
+        private System.Windows.Forms.Panel Panel6;
+        private System.Windows.Forms.Label mil3;
+        private System.Windows.Forms.Label seg3;
     }
 }

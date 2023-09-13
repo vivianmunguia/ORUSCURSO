@@ -10,6 +10,9 @@
     <Compile Update="Presentacion\AsistenteInstalacion\InstalacionBd.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Presentacion\AsistenteInstalacion\UsuarioPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Presentacion\CtlUsuarios.cs">
       <SubType>UserControl</SubType>
     </Compile>

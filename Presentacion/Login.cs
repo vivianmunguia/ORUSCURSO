@@ -34,7 +34,17 @@ namespace Oruscurso.Presentacion
             VerificarConexion();
             if (Indicador == "Correcto")
             {
-                DibujarUsuarios();
+                MostrarUsuarios();
+                if (Contador == 0)
+                {
+                    Dispose();
+                    UsuarioPrincipal frm = new UsuarioPrincipal();
+                    frm.ShowDialog();
+                }
+                else
+                {
+                    DibujarUsuarios();
+                }  
             }
             else
             {
@@ -42,6 +52,14 @@ namespace Oruscurso.Presentacion
                 EleccionServidor frm = new EleccionServidor();
                 frm.ShowDialog();
             }
+        }
+
+        private void MostrarUsuarios()
+        {
+            DataTable dt = new DataTable();
+            Dusuarios funcion = new Dusuarios();
+            funcion.MostrarUsuarios(ref dt);
+            Contador = dt.Rows.Count;
         }
 
         private void VerificarConexion()

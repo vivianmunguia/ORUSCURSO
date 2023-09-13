@@ -58,3 +58,4 @@ C:\Users\andy_\OneDrive\Documentos\Cursos\Xamarin\Xamarin básico Una introducci
 C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.Presentacion.AsistenteInstalacion.ConexionRemota.resources
 C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.Presentacion.AsistenteInstalacion.EleccionServidor.resources
 C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.Presentacion.AsistenteInstalacion.InstalacionBd.resources
+C:\Users\andy_\Documents\Cursos\Xamarin\Xamarin básico Una introducción al SDK de Microsoft\Oruscurso\obj\Debug\netcoreapp3.1\Oruscurso.Presentacion.AsistenteInstalacion.UsuarioPrincipal.resources

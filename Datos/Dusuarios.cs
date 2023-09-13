@@ -85,7 +85,7 @@ namespace Oruscurso.Datos
                 CONEXIONMAESTRA.cerrar();
                 Indicador = "Correcto";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Indicador = "Incorrecto";
             }
