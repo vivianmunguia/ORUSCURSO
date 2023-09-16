@@ -556,7 +556,9 @@
             Controls.Add(Panel2);
             Controls.Add(panel1);
             Name = "InstalacionBd";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "InstalacionBd";
+            WindowState = System.Windows.Forms.FormWindowState.Maximized;
             Load += InstalacionBd_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

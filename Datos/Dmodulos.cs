@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oruscurso.Logica;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq.Expressions;
@@ -19,6 +20,28 @@ namespace Oruscurso.Datos
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace);
+            }
+            finally
+            {
+                CONEXIONMAESTRA.cerrar();
+            }
+        }
+
+        public bool InsertarModulos(Lmodulos parametros)
+        {
+            try
+            {
+                CONEXIONMAESTRA.abrir();
+                SqlCommand cmd = new SqlCommand("InsertarModulos", CONEXIONMAESTRA.conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Modulo", parametros.Modulo);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return true;
             }
             finally
             {

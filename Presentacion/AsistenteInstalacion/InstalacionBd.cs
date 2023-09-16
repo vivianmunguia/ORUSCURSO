@@ -35,7 +35,7 @@ namespace Oruscurso.Presentacion.AsistenteInstalacion
 
         private void CentrarPaneles()
         {
-            Panel2.Location = new Point((Width - Panel2.Width) / 2, (Height - Panel2.Height) / 2);
+            Panel2.Location = new Point((Width - Panel2.Width) / 2, (Height - Panel2.Height) / 2); //Panel2
             NombreDelEquipoUsuario = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             Cursor = Cursors.WaitCursor; //El cursor obtiene la forma de un reloj de arena que significa que hay un proceso corriendo
             Panel5.Visible = false; //Panel4

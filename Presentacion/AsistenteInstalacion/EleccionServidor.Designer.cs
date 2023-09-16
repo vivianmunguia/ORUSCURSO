@@ -125,7 +125,9 @@
             Controls.Add(pictureBox2);
             Controls.Add(panel1);
             Name = "EleccionServidor";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "EleccionServidor";
+            WindowState = System.Windows.Forms.FormWindowState.Minimized;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
