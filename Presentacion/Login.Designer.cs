@@ -55,17 +55,20 @@
             PanelUsuarios = new System.Windows.Forms.Panel();
             flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             label3 = new System.Windows.Forms.Label();
+            Icono = new System.Windows.Forms.PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             PanelIngresoContraseña.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             panel3.SuspendLayout();
             PanelUsuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Icono).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = System.Drawing.Color.FromArgb(29, 29, 29);
+            panel1.Controls.Add(Icono);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
             panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -457,6 +460,15 @@
             label3.Text = "¿Quién está iniciando sesión?";
             label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // Icono
+            // 
+            Icono.Location = new System.Drawing.Point(355, 11);
+            Icono.Name = "Icono";
+            Icono.Size = new System.Drawing.Size(69, 41);
+            Icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            Icono.TabIndex = 3;
+            Icono.TabStop = false;
+            // 
             // Login
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -478,6 +490,7 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             PanelUsuarios.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)Icono).EndInit();
             ResumeLayout(false);
         }
 
@@ -509,5 +522,6 @@
         private System.Windows.Forms.Panel PanelUsuarios;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox Icono;
     }
 }

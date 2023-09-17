@@ -60,9 +60,9 @@ namespace Oruscurso.Presentacion
             btnPersonal = new System.Windows.Forms.Button();
             btnConsultas = new System.Windows.Forms.Button();
             panel3 = new System.Windows.Forms.Panel();
-            label2 = new System.Windows.Forms.Label();
+            lblLogin = new System.Windows.Forms.Label();
             pictureBox3 = new System.Windows.Forms.PictureBox();
-            pictureBox2 = new System.Windows.Forms.PictureBox();
+            Icono = new System.Windows.Forms.PictureBox();
             PanelPadre = new System.Windows.Forms.Panel();
             panelBienvenida = new System.Windows.Forms.Panel();
             label3 = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@ namespace Oruscurso.Presentacion
             panel5.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Icono).BeginInit();
             PanelPadre.SuspendLayout();
             panelBienvenida.SuspendLayout();
             SuspendLayout();
@@ -426,26 +426,26 @@ namespace Oruscurso.Presentacion
             // 
             // panel3
             // 
-            panel3.Controls.Add(label2);
+            panel3.Controls.Add(lblLogin);
             panel3.Controls.Add(pictureBox3);
-            panel3.Controls.Add(pictureBox2);
+            panel3.Controls.Add(Icono);
             panel3.Dock = System.Windows.Forms.DockStyle.Top;
             panel3.Location = new System.Drawing.Point(0, 0);
             panel3.Name = "panel3";
             panel3.Size = new System.Drawing.Size(174, 100);
             panel3.TabIndex = 0;
             // 
-            // label2
+            // lblLogin
             // 
-            label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label2.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            label2.Location = new System.Drawing.Point(89, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(85, 100);
-            label2.TabIndex = 3;
-            label2.Text = "Orus 369";
-            label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            lblLogin.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblLogin.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            lblLogin.Location = new System.Drawing.Point(89, 0);
+            lblLogin.Name = "lblLogin";
+            lblLogin.Size = new System.Drawing.Size(85, 100);
+            lblLogin.TabIndex = 3;
+            lblLogin.Text = "Orus 369";
+            lblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox3
             // 
@@ -456,14 +456,14 @@ namespace Oruscurso.Presentacion
             pictureBox3.TabIndex = 1;
             pictureBox3.TabStop = false;
             // 
-            // pictureBox2
+            // Icono
             // 
-            pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            pictureBox2.Location = new System.Drawing.Point(0, 0);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new System.Drawing.Size(41, 100);
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
+            Icono.Dock = System.Windows.Forms.DockStyle.Left;
+            Icono.Location = new System.Drawing.Point(0, 0);
+            Icono.Name = "Icono";
+            Icono.Size = new System.Drawing.Size(41, 100);
+            Icono.TabIndex = 0;
+            Icono.TabStop = false;
             // 
             // PanelPadre
             // 
@@ -518,7 +518,7 @@ namespace Oruscurso.Presentacion
             panel5.ResumeLayout(false);
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Icono).EndInit();
             PanelPadre.ResumeLayout(false);
             panelBienvenida.ResumeLayout(false);
             ResumeLayout(false);
@@ -557,10 +557,10 @@ namespace Oruscurso.Presentacion
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelBienvenida;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.PictureBox Icono;
     }
 }

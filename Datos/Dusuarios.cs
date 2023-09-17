@@ -74,6 +74,29 @@ namespace Oruscurso.Datos
             }
         }
 
+        public bool EliminarUsuario(Lusuarios parametros)
+        {
+            try
+            {
+                CONEXIONMAESTRA.abrir();
+                SqlCommand cmd = new SqlCommand("EliminarUsuarios", CONEXIONMAESTRA.conectar);
+                cmd.CommandType= CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Idusuario", parametros.IdUsuario);
+                cmd.Parameters.AddWithValue("@Login", parametros.Login);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+                return false;
+            }
+            finally
+            {
+                CONEXIONMAESTRA.cerrar();
+            }
+        }
+
         public void VerificarUsuarios(ref string Indicador)
         {
             try
@@ -105,6 +128,28 @@ namespace Oruscurso.Datos
             catch (Exception ex)
             {
                 id = 0;
+            }
+            finally
+            {
+                CONEXIONMAESTRA.cerrar();
+            }
+        }
+
+        public bool RestaurarUsuario(Lusuarios parametros)
+        {
+            try
+            {
+                CONEXIONMAESTRA.abrir();
+                SqlCommand cmd = new SqlCommand("RestaurarUsuario", CONEXIONMAESTRA.conectar);
+                cmd.CommandType= CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Idusuario", parametros.IdUsuario);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
             }
             finally
             {

@@ -81,14 +81,13 @@ namespace Oruscurso.Presentacion.AsistenteInstalacion
                 Dpermisos funcion = new Dpermisos();
                 parametros.IdModulo = idModulo;
                 parametros.IdUsuario = idUsuario;
-                if (funcion.InsertarPermisos(parametros) == true)
-                {
-                    MessageBox.Show("Listo, recuerda que para iniciar sesión tu usuario es " + txtUsuario.Text + "y tu contraseña es " + txtContrasena.Text, "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Dispose();
-                    Login frm = new Login();
-                    frm.ShowDialog();
-                }
+                funcion.InsertarPermisos(parametros);
             }
+
+            MessageBox.Show("Listo, recuerda que para iniciar sesión tu usuario es " + txtUsuario.Text + "y tu contraseña es " + txtContrasena.Text, "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Dispose();
+            Login frm = new Login();
+            frm.ShowDialog();
         }
 
         private void InsertarModulos()

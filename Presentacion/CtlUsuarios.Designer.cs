@@ -226,6 +226,7 @@
             dataListadoUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             dataListadoUsuarios.Size = new System.Drawing.Size(1083, 509);
             dataListadoUsuarios.TabIndex = 2;
+            dataListadoUsuarios.CellClick += dataListadoUsuarios_CellClick;
             // 
             // Eliminar
             // 

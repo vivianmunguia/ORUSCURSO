@@ -44,7 +44,7 @@ namespace Oruscurso.Presentacion
                 else
                 {
                     DibujarUsuarios();
-                }  
+                }
             }
             else
             {
@@ -113,7 +113,7 @@ namespace Oruscurso.Presentacion
 
                     flowLayoutPanel2.Controls.Add(p1);
 
-                    b.Click += MiEventoLabel; //b.Click += tabulador para crear el evento
+                    //b.Click += MiEventoLabel; //b.Click += tabulador para crear el evento
                     I1.Click += MiEventoImagen;
                 }
             }
@@ -126,15 +126,15 @@ namespace Oruscurso.Presentacion
         private void MiEventoImagen(object sender, EventArgs e)
         {
             Usuario = Convert.ToString(((PictureBox)sender).Tag);
+            Icono.Image = ((PictureBox)sender).Image;
             MostrarPanelPass();
         }
-
+        /*
         private void MiEventoLabel(object sender, EventArgs e)
         {
             Usuario = ((Label)sender).Text;
             MostrarPanelPass();
-
-        }
+        }*/
 
         private void MostrarPanelPass()
         {
@@ -160,6 +160,9 @@ namespace Oruscurso.Presentacion
             {
                 Dispose();
                 MenuPrincipal frm = new MenuPrincipal();
+                frm.Idusuario = Idusuario;
+                frm.LoginV = Usuario;
+                frm.Icono.Image = Icono.Image;
                 frm.ShowDialog();
             }
         }
